@@ -1,6 +1,0 @@
-framework module LoveTime {
-  umbrella header "LoveTime-umbrella.h"
-
-  export *
-  module * { export * }
-}
