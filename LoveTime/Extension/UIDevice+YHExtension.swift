@@ -62,20 +62,16 @@ import UIKit
     
     /// Liu Hai height (in fact, the height of StatusBar, compatible with all iPhones)
     @objc static var YH_Fringe_Height: CGFloat {
-        
-//        var value: CGFloat = .zero
-//        if YXDefine.isPhoneX() {
-//            if UIApplication.shared.statusBarOrientation == .landscapeLeft || UIApplication.shared.statusBarOrientation == .landscapeRight {
-//                value = 20
-//            } else {
-//                value = 44
-//            }
-//        }else {
-//            value = 20
-//        }
-//        return value
-        
-        return 0
+        var statusBarHeight: CGFloat = 0.0
+        if let window = UIApplication.shared.windows.first {
+            let topPadding: CGFloat = window.safeAreaInsets.top
+            if topPadding > 0 {
+                statusBarHeight = topPadding
+            }else {
+                statusBarHeight = 20
+            }
+        }
+        return statusBarHeight
 
     }
     
@@ -106,10 +102,17 @@ import UIKit
     }
     
     @objc static var YH_Tabbar_Height: CGFloat {
-//        if YXDefine.isPhoneX() {
-//            return 80.0
-//        }
-        return 50.0
+        
+        var statusBarHeight: CGFloat = 0.0
+        if let window = UIApplication.shared.windows.first {
+            let topPadding: CGFloat = window.safeAreaInsets.bottom
+            if topPadding > 0 {
+                statusBarHeight = topPadding
+            }else {
+                statusBarHeight = 0.0
+            }
+        }
+        return statusBarHeight + 50.0
     }
     
     
