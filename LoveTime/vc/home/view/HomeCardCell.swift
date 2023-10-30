@@ -12,6 +12,9 @@ class HomeCardCell: LTCardCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.backgroundColor = UIColor.white
+        self.layer.cornerRadius = 16.0
+        self.layer.masksToBounds = true
     }
 
 }

@@ -35,12 +35,22 @@ class LTHomeViewController: LTBaseViewController {
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.red
         
+        self.view.backgroundColor = .red
+        self.cusNaviBar.hideNaviBar = false
+        self.cusNaviBar.backgroundColor = UIColor.green
+        self.defaultNaviBackButton.isHidden = true
+//        self.cusNaviBar.rightItems = self.rightItems
+        self.cusNaviBar.reloadUI(origin: .zero, width: UIDevice.YH_Width)
+//        self.cusNaviBar.qmui_borderPosition = .bottom
+//        self.cusNaviBar.qmui_borderWidth = BCDefine.seperateLineHeight()
+//        self.cusNaviBar.qmui_borderColor = UIColor.clear
+        
         self.view.addSubview(cardView)
         cardView.snp_makeConstraints { make in
-            make.left.equalTo(self.view.snp_left).offset(50)
+            make.left.equalTo(self.view.snp_left).offset(40)
             make.top.equalTo(self.cusNaviBar.snp_bottom).offset(50)
-            make.right.equalTo(self.view.snp_right).offset(-50)
-            make.bottom.equalTo(self.view.snp_bottom).offset(-UIDevice.YH_Tabbar_Height)
+            make.right.equalTo(self.view.snp_right).offset(-40)
+            make.bottom.equalTo(self.view.snp_bottom).offset(-(UIDevice.YH_Tabbar_Height + 30))
 
         }
         
