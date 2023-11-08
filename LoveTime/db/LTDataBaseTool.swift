@@ -28,7 +28,7 @@ class LTDataBaseTool : NSObject {
             return
         }
         self.base = dbBase
-//        HYUkCollectionDao.default.createTable(database: dbBase)
+        LTHomeListDao.default.createTable(database: dbBase)
 //        HYUkSearchKeyDao.default.createTable(database: dbBase)
 //        HYUkHistoryRecordDao.default.createTable(database: dbBase)
 //        HYUkDownListDao.default.createTable(database: dbBase)

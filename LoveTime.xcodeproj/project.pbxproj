@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		45009D9988DAD7C6877B63BF /* Pods_LoveTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A80243DC442AFCEE74640BBF /* Pods_LoveTime.framework */; };
+		83874E882AFB5F4F00D63D2E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83874E8A2AFB5F4F00D63D2E /* Localizable.strings */; };
+		83874E8E2AFB755D00D63D2E /* LTHomeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83874E8D2AFB755D00D63D2E /* LTHomeListModel.swift */; };
+		83874E932AFB75B400D63D2E /* 锐字真言体.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83874E902AFB75B100D63D2E /* 锐字真言体.ttf */; };
+		83874E942AFB75B400D63D2E /* JBR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83874E912AFB75B300D63D2E /* JBR.ttf */; };
+		83874E952AFB75B400D63D2E /* reliankapian.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83874E922AFB75B300D63D2E /* reliankapian.plist */; };
+		83874E972AFB7F2200D63D2E /* LTHomeListDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83874E962AFB7F2200D63D2E /* LTHomeListDao.swift */; };
+		83874E992AFB7F3500D63D2E /* LTHomeListLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83874E982AFB7F3500D63D2E /* LTHomeListLogic.swift */; };
 		83E42F6B2ADCC679009D3D99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E42F6A2ADCC679009D3D99 /* AppDelegate.swift */; };
 		83E42F6F2ADCC679009D3D99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E42F6E2ADCC679009D3D99 /* ViewController.swift */; };
 		83E42F722ADCC679009D3D99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E42F702ADCC679009D3D99 /* Main.storyboard */; };
@@ -33,6 +40,14 @@
 /* Begin PBXFileReference section */
 		0AF700F191352C79713C4ECF /* Pods-LoveTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveTime.release.xcconfig"; path = "Target Support Files/Pods-LoveTime/Pods-LoveTime.release.xcconfig"; sourceTree = "<group>"; };
 		29D4DAA7BB8C6D26BAD91BEB /* Pods-LoveTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveTime.debug.xcconfig"; path = "Target Support Files/Pods-LoveTime/Pods-LoveTime.debug.xcconfig"; sourceTree = "<group>"; };
+		83874E892AFB5F4F00D63D2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		83874E8B2AFB5F7500D63D2E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		83874E8D2AFB755D00D63D2E /* LTHomeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTHomeListModel.swift; sourceTree = "<group>"; };
+		83874E902AFB75B100D63D2E /* 锐字真言体.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "锐字真言体.ttf"; sourceTree = "<group>"; };
+		83874E912AFB75B300D63D2E /* JBR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = JBR.ttf; sourceTree = "<group>"; };
+		83874E922AFB75B300D63D2E /* reliankapian.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = reliankapian.plist; sourceTree = "<group>"; };
+		83874E962AFB7F2200D63D2E /* LTHomeListDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTHomeListDao.swift; sourceTree = "<group>"; };
+		83874E982AFB7F3500D63D2E /* LTHomeListLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTHomeListLogic.swift; sourceTree = "<group>"; };
 		83E42F672ADCC679009D3D99 /* LoveTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83E42F6A2ADCC679009D3D99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83E42F6E2ADCC679009D3D99 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +93,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		83874E8C2AFB752C00D63D2E /* home */ = {
+			isa = PBXGroup;
+			children = (
+				83874E8D2AFB755D00D63D2E /* LTHomeListModel.swift */,
+				83874E962AFB7F2200D63D2E /* LTHomeListDao.swift */,
+				83874E982AFB7F3500D63D2E /* LTHomeListLogic.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		83874E8F2AFB759B00D63D2E /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				83874E902AFB75B100D63D2E /* 锐字真言体.ttf */,
+				83874E912AFB75B300D63D2E /* JBR.ttf */,
+				83874E922AFB75B300D63D2E /* reliankapian.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		83E42F5E2ADCC679009D3D99 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +134,7 @@
 		83E42F692ADCC679009D3D99 /* LoveTime */ = {
 			isa = PBXGroup;
 			children = (
+				83874E8F2AFB759B00D63D2E /* Config */,
 				9AB7A04E2ADD775900C10C9F /* db */,
 				9AB7A03E2ADD744000C10C9F /* Extension */,
 				9AB7A0322ADD732E00C10C9F /* UIHelper */,
@@ -110,6 +146,7 @@
 				83E42F732ADCC67A009D3D99 /* Assets.xcassets */,
 				83E42F752ADCC67A009D3D99 /* LaunchScreen.storyboard */,
 				83E42F782ADCC67A009D3D99 /* Info.plist */,
+				83874E8A2AFB5F4F00D63D2E /* Localizable.strings */,
 			);
 			path = LoveTime;
 			sourceTree = "<group>";
@@ -191,6 +228,7 @@
 		9AB7A04E2ADD775900C10C9F /* db */ = {
 			isa = PBXGroup;
 			children = (
+				83874E8C2AFB752C00D63D2E /* home */,
 				9AB7A04F2ADD777500C10C9F /* LTDataBaseTool.swift */,
 			);
 			path = db;
@@ -249,6 +287,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 83E42F5E2ADCC679009D3D99;
 			productRefGroup = 83E42F682ADCC679009D3D99 /* Products */;
@@ -265,7 +304,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83874E882AFB5F4F00D63D2E /* Localizable.strings in Resources */,
 				83EC88862AEA6F3D00740AFF /* HomeCardCell.xib in Resources */,
+				83874E942AFB75B400D63D2E /* JBR.ttf in Resources */,
+				83874E952AFB75B400D63D2E /* reliankapian.plist in Resources */,
+				83874E932AFB75B400D63D2E /* 锐字真言体.ttf in Resources */,
 				83E42F772ADCC67A009D3D99 /* LaunchScreen.storyboard in Resources */,
 				83E42F742ADCC67A009D3D99 /* Assets.xcassets in Resources */,
 				83E42F722ADCC679009D3D99 /* Main.storyboard in Resources */,
@@ -325,9 +368,12 @@
 				9AB7A0372ADD733F00C10C9F /* LTCardCell.swift in Sources */,
 				83E42F6F2ADCC679009D3D99 /* ViewController.swift in Sources */,
 				83E42F6B2ADCC679009D3D99 /* AppDelegate.swift in Sources */,
+				83874E992AFB7F3500D63D2E /* LTHomeListLogic.swift in Sources */,
 				9AB7A0302ADD730000C10C9F /* BaseTabBarController.swift in Sources */,
 				9AB7A03D2ADD73E300C10C9F /* LTCusNavigationBar.swift in Sources */,
 				9AB7A0502ADD777500C10C9F /* LTDataBaseTool.swift in Sources */,
+				83874E972AFB7F2200D63D2E /* LTHomeListDao.swift in Sources */,
+				83874E8E2AFB755D00D63D2E /* LTHomeListModel.swift in Sources */,
 				9AB7A03C2ADD73E300C10C9F /* LTBaseViewController.swift in Sources */,
 				9AB7A0432ADD745800C10C9F /* UIDevice+YHExtension.swift in Sources */,
 				9AB7A0422ADD745800C10C9F /* UIColor+YX.swift in Sources */,
@@ -343,6 +389,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		83874E8A2AFB5F4F00D63D2E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83874E892AFB5F4F00D63D2E /* en */,
+				83874E8B2AFB5F7500D63D2E /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		83E42F702ADCC679009D3D99 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -367,6 +422,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -414,7 +470,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -430,6 +486,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -471,7 +528,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -489,6 +546,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V6VQ8W355L;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LoveTime/Info.plist;
@@ -522,6 +580,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V6VQ8W355L;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LoveTime/Info.plist;

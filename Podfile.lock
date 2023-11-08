@@ -307,6 +307,7 @@ PODS:
   - YYImage (1.0.4):
     - YYImage/Core (= 1.0.4)
   - YYImage/Core (1.0.4)
+  - YYModel (1.0.4)
   - YYWebImage (1.0.5):
     - YYCache
     - YYImage
@@ -316,6 +317,7 @@ DEPENDENCIES:
   - QMUIKit (= 4.6.1)
   - SnapKit (= 5.6.0)
   - WCDB.swift (= 1.1.0)
+  - YYModel
   - YYWebImage
 
 SPEC REPOS:
@@ -328,6 +330,7 @@ SPEC REPOS:
     - WCDBOptimizedSQLCipher
     - YYCache
     - YYImage
+    - YYModel
     - YYWebImage
 
 SPEC CHECKSUMS:
@@ -339,8 +342,9 @@ SPEC CHECKSUMS:
   WCDBOptimizedSQLCipher: fc5d49fe6761e54aad29e88da01b6fc1283e5759
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 0e84b25b634ec9506de44179c0d60cba637d39f0
+PODFILE CHECKSUM: a274829dec84a330c6e77c82f3a1d265850bac25
 
 COCOAPODS: 1.13.0
