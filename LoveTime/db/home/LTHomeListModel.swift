@@ -13,14 +13,13 @@ class LTHomeListModel: NSObject, TableCodable {
     
     public var ltId: Int?
     public var tid: Int = 0
-    public var title: String = ""
     public var name: String = ""
+    public var geyan: String = ""
     public var content: String = ""
     public var address: String = ""
     public var imageName: String = ""
     public var type: Int = 0
     public var typeName: String = ""
-    public var tag: String = ""
     public var changeTime: Int = 0
     public var create_Time: Int = 0
 
@@ -31,14 +30,13 @@ class LTHomeListModel: NSObject, TableCodable {
        
         case ltId
         case tid
-        case title
         case name
+        case geyan
         case content
         case address
         case imageName
         case type
         case typeName
-        case tag
         case changeTime
         case create_Time
 
@@ -47,14 +45,13 @@ class LTHomeListModel: NSObject, TableCodable {
 //                ltId: ColumnConstraintBinding(isPrimary: true),
                 ltId: ColumnConstraintBinding(isPrimary: true, isAutoIncrement: true),
                 tid: ColumnConstraintBinding(defaultTo: 0),
-                title: ColumnConstraintBinding(defaultTo: ""),
                 name: ColumnConstraintBinding(defaultTo: ""),
+                geyan: ColumnConstraintBinding(defaultTo: ""),
                 content: ColumnConstraintBinding(defaultTo: ""),
                 address: ColumnConstraintBinding(defaultTo: ""),
                 imageName: ColumnConstraintBinding(defaultTo: ""),
                 type: ColumnConstraintBinding(defaultTo: 0),
                 typeName: ColumnConstraintBinding(defaultTo: ""),
-                tag: ColumnConstraintBinding(defaultTo: ""),
                 changeTime: ColumnConstraintBinding(defaultTo: 0),
                 create_Time: ColumnConstraintBinding(defaultTo: 0),
             ]

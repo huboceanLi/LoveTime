@@ -61,6 +61,10 @@ class LTHomeViewController: LTBaseViewController {
         self.cardView.setCardLayout(cardLayout: self.cardLayout)
         self.cardView.register(nibCellType: HomeCardCell.self)
         self.cardView.reloadData()
+        
+        Task {
+            await LTHomeListLogic.share.firstSaveData()
+        }
     }
 }
 
