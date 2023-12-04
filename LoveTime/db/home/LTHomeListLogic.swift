@@ -13,20 +13,7 @@ import Foundation
     
     
     func firstSaveData() async -> Bool {
-        
-//    case ltId
-//    case tid
-//    case name
-//    case geyan
-//    case content
-//    case address
-//    case imageName
-//    case type
-//    case typeName
-//    case tag
-//    case changeTime
-//    case create_Time
-        
+
         let infos = await LTHomeListDao.default.queryWithTypeName(typeName: "生活")
         if infos.isEmpty {
             //save
@@ -113,5 +100,9 @@ import Foundation
         let currentDate = Date()
         let millisecondsSince1970 = Int(currentDate.timeIntervalSince1970 * 1000)
         return millisecondsSince1970
+    }
+    
+    func queryWithTypeName(typeName: String) async -> [LTHomeListModel] {
+        return await LTHomeListDao.default.queryWithTypeName(typeName: "生活")
     }
 }

@@ -78,6 +78,13 @@
                 <constraint firstItem="xAp-1a-i1x" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="x8F-gs-MUm"/>
             </constraints>
             <size key="customSize" width="365" height="543"/>
+            <connections>
+                <outlet property="contentLab" destination="npb-8s-rqT" id="LNX-aV-b8X"/>
+                <outlet property="headImageView" destination="vup-5k-oNO" id="mV2-vg-T0U"/>
+                <outlet property="tagLab" destination="w0W-Ku-hCO" id="jZ1-Wn-8xJ"/>
+                <outlet property="tilmeLab" destination="oKB-dv-EOA" id="lQO-1x-iUr"/>
+                <outlet property="titleLab" destination="xAp-1a-i1x" id="k1J-mM-4El"/>
+            </connections>
             <point key="canvasLocation" x="217.55725190839695" y="60.91549295774648"/>
         </collectionViewCell>
     </objects>

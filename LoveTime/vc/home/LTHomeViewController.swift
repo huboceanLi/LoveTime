@@ -10,8 +10,9 @@ import SnapKit
 
 class LTHomeViewController: LTBaseViewController {
 
-    var cellCount: Int = 10
 
+    var list: [LTHomeListModel] = []
+    
     private lazy var cardLayout: LTCardLayout = {
         let layout = LTCardLayout()
         layout.visibleCount = 4
@@ -35,7 +36,7 @@ class LTHomeViewController: LTBaseViewController {
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.red
         
-        let welcomeMessage = NSLocalizedString("生活", comment: "test456")
+//        let welcomeMessage = NSLocalizedString("生活", comment: "test456")
 
         self.view.backgroundColor = .red
         self.cusNaviBar.hideNaviBar = false
@@ -64,6 +65,16 @@ class LTHomeViewController: LTBaseViewController {
         
         Task {
             await LTHomeListLogic.share.firstSaveData()
+            
+            if let str: String = UserDefaults.standard.object(forKey: "TITLENAME") as? String, str.count > 0 {
+                self.list = await LTHomeListLogic.share.queryWithTypeName(typeName: str)
+                self.cardView.reloadData()
+            }else {
+                UserDefaults.standard.setValue("生活", forKey: "TITLENAME")
+                self.list = await LTHomeListLogic.share.queryWithTypeName(typeName: "生活")
+                self.cardView.reloadData()
+            }
+            
         }
     }
 }
@@ -73,7 +84,7 @@ extension LTHomeViewController: GXCardCViewDataSource, GXCardCViewDelegate {
 
     
     func numberOfItems(in cardView: LTCardView) -> Int {
-        return self.cellCount
+        return self.list.count
     }
     func cardView(_ cardView: LTCardView, cellForItemAt indexPath: IndexPath) -> LTCardCell {
         let cell = cardView.dequeueReusableCell(for: indexPath, cellType: HomeCardCell.self)
@@ -82,6 +93,7 @@ extension LTHomeViewController: GXCardCViewDataSource, GXCardCViewDelegate {
 //        cell.leftLabel.isHidden = true
 //        cell.rightLabel.isHidden = true
         
+        cell.getModel(model: self.list[indexPath.row])
         return cell
     }
     
@@ -102,10 +114,10 @@ extension LTHomeViewController: GXCardCViewDataSource, GXCardCViewDelegate {
     }
     func cardView(_ cardView: LTCardView, didRemove cell: LTCardCell, forItemAt index: Int, direction: HomeCardCell.SwipeDirection) {
         NSLog("didRemove forRowAtIndex = %d, direction = %d", index, direction.rawValue)
-        if !cardView.cardLayout.isRepeat && index == 9 {
-            self.cellCount = 20
-            cardView.reloadData()
-        }
+//        if !cardView.cardLayout.isRepeat && index == 9 {
+//            self.cellCount = 20
+//            cardView.reloadData()
+//        }
     }
     func cardView(_ cardView: LTCardView, didMove cell: LTCardCell, forItemAt index: Int, move point: CGPoint, direction: LTCardCell.SwipeDirection) {
         NSLog("move point = %@,  direction = %ld", point.debugDescription, direction.rawValue)

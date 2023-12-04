@@ -38,13 +38,13 @@ class LTDataBaseTool : NSObject {
     // MARK: -
     private func getDatabasePath() -> String? {
         
-//        let path = HYLocalPathManager.funVideoRootPath("DB")
-//        let createDbPath = HYLocalPathManager.createPath(path)
-//
-//        if createDbPath {
-//            print("Database Folder Path: \(path)")
-//            return path
-//        }
+        let path = HYLocalPathManager.funVideoRootPath("DB")
+        let createDbPath = HYLocalPathManager.createPath(path)
+
+        if createDbPath {
+            print("Database Folder Path: \(path)")
+            return path
+        }
         return nil
     }
     
