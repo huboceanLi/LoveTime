@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.9.1)
+  - Masonry (1.1.0)
   - QMUIKit (4.6.1):
     - QMUIKit/QMUIComponents (= 4.6.1)
     - QMUIKit/QMUICore (= 4.6.1)
@@ -314,6 +315,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (= 4.9.1)
+  - Masonry
   - QMUIKit (= 4.6.1)
   - SnapKit (= 5.6.0)
   - WCDB.swift (= 1.1.0)
@@ -323,6 +325,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - Masonry
     - QMUIKit
     - SnapKit
     - SQLiteRepairKit
@@ -335,6 +338,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   QMUIKit: e5e848e433948258f8a79e794ed68180c5f7c2e1
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SQLiteRepairKit: a66145aadae91886c800f75e16f5cc6476af1a93
@@ -345,6 +349,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: a274829dec84a330c6e77c82f3a1d265850bac25
+PODFILE CHECKSUM: cc58c0a270eca2d398a0041bafdb1761f6ca69b9
 
 COCOAPODS: 1.13.0

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		45009D9988DAD7C6877B63BF /* Pods_LoveTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A80243DC442AFCEE74640BBF /* Pods_LoveTime.framework */; };
+		8368957D2B1DBBB2009274AD /* BCChatRightNavMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8368957B2B1DBBB1009274AD /* BCChatRightNavMoreView.m */; };
+		8368959C2B1DCE59009274AD /* UIView+RoundedCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = 8368959B2B1DCE59009274AD /* UIView+RoundedCorners.m */; };
 		83874E882AFB5F4F00D63D2E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83874E8A2AFB5F4F00D63D2E /* Localizable.strings */; };
 		83874E8E2AFB755D00D63D2E /* LTHomeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83874E8D2AFB755D00D63D2E /* LTHomeListModel.swift */; };
 		83874E932AFB75B400D63D2E /* 锐字真言体.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83874E902AFB75B100D63D2E /* 锐字真言体.ttf */; };
@@ -41,6 +43,10 @@
 /* Begin PBXFileReference section */
 		0AF700F191352C79713C4ECF /* Pods-LoveTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveTime.release.xcconfig"; path = "Target Support Files/Pods-LoveTime/Pods-LoveTime.release.xcconfig"; sourceTree = "<group>"; };
 		29D4DAA7BB8C6D26BAD91BEB /* Pods-LoveTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveTime.debug.xcconfig"; path = "Target Support Files/Pods-LoveTime/Pods-LoveTime.debug.xcconfig"; sourceTree = "<group>"; };
+		8368957B2B1DBBB1009274AD /* BCChatRightNavMoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCChatRightNavMoreView.m; sourceTree = "<group>"; };
+		8368957C2B1DBBB2009274AD /* BCChatRightNavMoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCChatRightNavMoreView.h; sourceTree = "<group>"; };
+		8368959A2B1DCE59009274AD /* UIView+RoundedCorners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RoundedCorners.h"; sourceTree = "<group>"; };
+		8368959B2B1DCE59009274AD /* UIView+RoundedCorners.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RoundedCorners.m"; sourceTree = "<group>"; };
 		83874E892AFB5F4F00D63D2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		83874E8B2AFB5F7500D63D2E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		83874E8D2AFB755D00D63D2E /* LTHomeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTHomeListModel.swift; sourceTree = "<group>"; };
@@ -161,6 +167,10 @@
 		83EC88822AEA6F1400740AFF /* view */ = {
 			isa = PBXGroup;
 			children = (
+				8368959A2B1DCE59009274AD /* UIView+RoundedCorners.h */,
+				8368959B2B1DCE59009274AD /* UIView+RoundedCorners.m */,
+				8368957C2B1DBBB2009274AD /* BCChatRightNavMoreView.h */,
+				8368957B2B1DBBB1009274AD /* BCChatRightNavMoreView.m */,
 				83EC88832AEA6F3D00740AFF /* HomeCardCell.swift */,
 				83EC88842AEA6F3D00740AFF /* HomeCardCell.xib */,
 			);
@@ -373,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83EC88852AEA6F3D00740AFF /* HomeCardCell.swift in Sources */,
+				8368959C2B1DCE59009274AD /* UIView+RoundedCorners.m in Sources */,
 				9AB7A0372ADD733F00C10C9F /* LTCardCell.swift in Sources */,
 				83E42F6F2ADCC679009D3D99 /* ViewController.swift in Sources */,
 				83874EB52AFCACB700D63D2E /* HYLocalPathManager.m in Sources */,
@@ -387,6 +398,7 @@
 				9AB7A0432ADD745800C10C9F /* UIDevice+YHExtension.swift in Sources */,
 				9AB7A0422ADD745800C10C9F /* UIColor+YX.swift in Sources */,
 				9AB7A04D2ADD771D00C10C9F /* LTMyViewController.swift in Sources */,
+				8368957D2B1DBBB2009274AD /* BCChatRightNavMoreView.m in Sources */,
 				9AB7A0382ADD733F00C10C9F /* LTCardLayout.swift in Sources */,
 				9AB7A0472ADD76FD00C10C9F /* LTHomeViewController.swift in Sources */,
 				9AB7A04A2ADD770E00C10C9F /* LTLoveViewController.swift in Sources */,

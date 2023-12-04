@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import YYWebImage
 
 class HomeCardCell: LTCardCell {
 
@@ -26,7 +27,13 @@ class HomeCardCell: LTCardCell {
         
         self.titleLab.text = model.name
         self.contentLab.text = model.content
-        self.tagLab.text = model.typeName
+        self.tagLab.text = model.address
+        self.tilmeLab.text = LTHomeListLogic.share.convertTimestampToDateTime(timestamp: TimeInterval(model.changeTime/1000))
         
+        if let img = UIImage.init(named: model.imageName) {
+            self.headImageView.image = img
+        }else {
+            self.headImageView.yy_setImage(with: URL(fileURLWithPath: model.imageName))
+        }
     }
 }

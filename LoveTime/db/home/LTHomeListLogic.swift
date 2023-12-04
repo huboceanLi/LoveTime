@@ -33,7 +33,7 @@ import Foundation
                         if let arr = d["content"] as? Array<Any> {
                             
                             for index in 0..<arr.count - 1 {
-                                
+
                                 if let item = arr[index] as? Dictionary<String, Any> {
                                     
                                     let itemModel = LTHomeListModel()
@@ -46,7 +46,6 @@ import Foundation
                                     itemModel.content = item["content"] as! String
                                     itemModel.address = item["address"] as! String
                                     itemModel.imageName = item["img"] as! String
-                                    itemModel.content = item["title"] as! String
                                     itemModel.changeTime = self.getTime()
                                     itemModel.create_Time = self.getNowTime()
                                     list.append(itemModel)
@@ -103,6 +102,17 @@ import Foundation
     }
     
     func queryWithTypeName(typeName: String) async -> [LTHomeListModel] {
-        return await LTHomeListDao.default.queryWithTypeName(typeName: "生活")
+        return await LTHomeListDao.default.queryWithTypeName(typeName: typeName)
+    }
+    
+    func convertTimestampToDateTime(timestamp: TimeInterval) -> String {
+        let date = Date(timeIntervalSince1970: timestamp)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd" // 定义日期时间格式
+        
+        let formattedDateTime = dateFormatter.string(from: date)
+        
+        return formattedDateTime
     }
 }

@@ -30,6 +30,24 @@ class LTHomeViewController: LTBaseViewController {
         return cardView
     }()
     
+    private lazy var moreButton: UIButton = {
+        let moreButton = UIButton(type: .custom)
+        moreButton.setImage(UIImage(named: "chat_list_more"), for: .normal)
+        moreButton.addTarget(self, action: #selector(moreAction), for: .touchUpInside)
+        return moreButton
+    }()
+    
+    private lazy var rightItems: [Any] = {
+        var rightSpaceItem = YHCusNavigationSpaceItem()
+        rightSpaceItem.space = 10.0
+        
+        var rightAddItem = YHCusNavigationBarItem()
+        rightAddItem.width = 40.0
+        rightAddItem.view = self.moreButton
+        
+        return [rightAddItem, rightSpaceItem]
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,7 +60,7 @@ class LTHomeViewController: LTBaseViewController {
         self.cusNaviBar.hideNaviBar = false
         self.cusNaviBar.backgroundColor = UIColor.green
         self.defaultNaviBackButton.isHidden = true
-//        self.cusNaviBar.rightItems = self.rightItems
+        self.cusNaviBar.rightItems = self.rightItems
         self.cusNaviBar.reloadUI(origin: .zero, width: UIDevice.YH_Width)
 //        self.cusNaviBar.qmui_borderPosition = .bottom
 //        self.cusNaviBar.qmui_borderWidth = BCDefine.seperateLineHeight()
@@ -64,7 +82,7 @@ class LTHomeViewController: LTBaseViewController {
         self.cardView.reloadData()
         
         Task {
-            await LTHomeListLogic.share.firstSaveData()
+            let _ = await LTHomeListLogic.share.firstSaveData()
             
             if let str: String = UserDefaults.standard.object(forKey: "TITLENAME") as? String, str.count > 0 {
                 self.list = await LTHomeListLogic.share.queryWithTypeName(typeName: str)
@@ -77,22 +95,40 @@ class LTHomeViewController: LTBaseViewController {
             
         }
     }
+    
+    @objc private func moreAction() {
+        
+        let l = ["生活","欣赏","旅行","学习","运动","时光","享受"]
+        let moreView = BCChatRightNavMoreView()
+        moreView.frame = CGRectMake(0, 0, UIDevice.YH_Width, UIDevice.YH_Height)
+        moreView.initUI(withItemNameArr:l, itemImageStrArr: ["chat_rightMore_newChat","chat_rightMore_addContact","chat_rightMore_scan","chat_rightMore_scan","chat_rightMore_scan","chat_rightMore_scan","chat_rightMore_scan"])
+        UIApplication.shared.keyWindow?.addSubview(moreView)
+        moreView.show()
+        
+        moreView.tapNumItem = { [weak self] itemIndex in
+            guard let self = self else { return }
+
+            Task {
+                let ccc = Int(itemIndex)
+                let sss = l[ccc]
+                UserDefaults.standard.setValue(sss, forKey: "TITLENAME")
+                self.list = await LTHomeListLogic.share.queryWithTypeName(typeName: sss)
+                DispatchQueue.main.async {
+                    self.cardView.reloadData()
+                }
+            }
+        }
+    }
 }
 
 extension LTHomeViewController: GXCardCViewDataSource, GXCardCViewDelegate {
-    
-
-    
+        
     func numberOfItems(in cardView: LTCardView) -> Int {
         return self.list.count
     }
     func cardView(_ cardView: LTCardView, cellForItemAt indexPath: IndexPath) -> LTCardCell {
         let cell = cardView.dequeueReusableCell(for: indexPath, cellType: HomeCardCell.self)
-//        cell.iconIView.image = UIImage(named: String(format: "banner%d.jpeg", indexPath.item%3))
-//        cell.numberLabel.text = String(indexPath.item)
-//        cell.leftLabel.isHidden = true
-//        cell.rightLabel.isHidden = true
-        
+
         cell.getModel(model: self.list[indexPath.row])
         return cell
     }
@@ -107,11 +143,12 @@ extension LTHomeViewController: GXCardCViewDataSource, GXCardCViewDelegate {
     }
     func cardView(_ cardView: LTCardView, willRemove cell: LTCardCell, forItemAt index: Int, direction: LTCardCell.SwipeDirection) {
         NSLog("willRemove forRowAtIndex = %d, direction = %d", index, direction.rawValue)
-        if let toCell = cell as? HomeCardCell {
+//        if let toCell = cell as? HomeCardCell {
 //            toCell.leftLabel.isHidden = !(direction == .right)
 //            toCell.rightLabel.isHidden = !(direction == .left)
-        }
+//        }
     }
+    
     func cardView(_ cardView: LTCardView, didRemove cell: LTCardCell, forItemAt index: Int, direction: HomeCardCell.SwipeDirection) {
         NSLog("didRemove forRowAtIndex = %d, direction = %d", index, direction.rawValue)
 //        if !cardView.cardLayout.isRepeat && index == 9 {

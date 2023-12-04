@@ -3,3 +3,5 @@
 //
 
 #import "HYLocalPathManager.h"
+#import "BCChatRightNavMoreView.h"
+#import "UIView+RoundedCorners.h"
