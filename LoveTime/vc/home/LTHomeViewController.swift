@@ -85,10 +85,12 @@ class LTHomeViewController: LTBaseViewController {
             let _ = await LTHomeListLogic.share.firstSaveData()
             
             if let str: String = UserDefaults.standard.object(forKey: "TITLENAME") as? String, str.count > 0 {
+                self.defaultNaviTitleLabel.text = str
                 self.list = await LTHomeListLogic.share.queryWithTypeName(typeName: str)
                 self.cardView.reloadData()
             }else {
                 UserDefaults.standard.setValue("生活", forKey: "TITLENAME")
+                self.defaultNaviTitleLabel.text = "生活"
                 self.list = await LTHomeListLogic.share.queryWithTypeName(typeName: "生活")
                 self.cardView.reloadData()
             }
@@ -112,6 +114,7 @@ class LTHomeViewController: LTBaseViewController {
                 let ccc = Int(itemIndex)
                 let sss = l[ccc]
                 UserDefaults.standard.setValue(sss, forKey: "TITLENAME")
+                self.defaultNaviTitleLabel.text = sss
                 self.list = await LTHomeListLogic.share.queryWithTypeName(typeName: sss)
                 DispatchQueue.main.async {
                     self.cardView.reloadData()
