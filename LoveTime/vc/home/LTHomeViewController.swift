@@ -56,7 +56,6 @@ class LTHomeViewController: LTBaseViewController {
         
 //        let welcomeMessage = NSLocalizedString("生活", comment: "test456")
 
-        self.view.backgroundColor = .red
         self.cusNaviBar.hideNaviBar = false
         self.cusNaviBar.backgroundColor = UIColor.green
         self.defaultNaviBackButton.isHidden = true
@@ -72,7 +71,6 @@ class LTHomeViewController: LTBaseViewController {
             make.top.equalTo(self.cusNaviBar.snp_bottom).offset(50)
             make.right.equalTo(self.view.snp_right).offset(-40)
             make.bottom.equalTo(self.view.snp_bottom).offset(-(UIDevice.YH_Tabbar_Height + 30))
-
         }
         
         self.cardView.dataSource = self
@@ -171,5 +169,8 @@ extension LTHomeViewController: GXCardCViewDataSource, GXCardCViewDelegate {
     }
     func cardView(_ cardView: LTCardView, didSelectItemAt index: Int) {
         NSLog("didSelectItemAt index = %d", index)
+        let vc = HomeEditViewController()
+        vc.model = self.list[index]
+        self.present(vc, animated: true)
     }
 }

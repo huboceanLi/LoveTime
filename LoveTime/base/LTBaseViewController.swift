@@ -27,7 +27,7 @@ import SnapKit
     /// The default back button in the navigation bar
     public lazy var defaultNaviBackButton: UIButton = {
         let defaultNaviBackButton = UIButton(type: .custom)
-        defaultNaviBackButton.setImage(UIImage.init(named: "uk_back"), for: .normal)
+        defaultNaviBackButton.setImage(UIImage.init(named: "bc_navi_black_back"), for: .normal)
         defaultNaviBackButton.titleLabel?.adjustsFontSizeToFitWidth = true
         defaultNaviBackButton.addTarget(self, action: #selector(backButtonAction), for: .touchUpInside)
         return defaultNaviBackButton
@@ -123,23 +123,24 @@ import SnapKit
     }
     
     @objc private func backButtonAction() {
-//        if let navi = self.navigationController {
-//            if navi.viewControllers.count > 1 {
-//                YXDefine.pop(withSender: navi)
-//            } else {
-//                if let _ = navi.presentingViewController {
-//                    YXDefine.dismissWhithDestination(navi)
-//                } else {
-//                    YXDefine.pop(withSender: navi)
-//                }
-//            }
-//        } else if let _ = self.presentingViewController {
-//            YXDefine.dismissWhithDestination(self)
-//        } else {
-//            if let nav = self.navigationController {
-//                YXDefine.pop(withSender: nav)
-//            }
-//        }
+        if let navi = self.navigationController {
+            if navi.viewControllers.count > 1 {
+                
+                LTDefine.pop(withSender: navi, destination: "")
+            } else {
+                if let _ = navi.presentingViewController {
+                    LTDefine.dismissWhithDestination(navi)
+                } else {
+                    LTDefine.pop(withSender: navi, destination: "")
+                }
+            }
+        } else if let _ = self.presentingViewController {
+            LTDefine.dismissWhithDestination(self)
+        } else {
+            if let nav = self.navigationController {
+                LTDefine.pop(withSender: nav, destination: "")
+            }
+        }
     }
     
     deinit {
