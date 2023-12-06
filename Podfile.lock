@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.9.1)
   - IQKeyboardManagerSwift (6.5.6)
   - Masonry (1.1.0)
+  - MBProgressHUD (1.2.0)
   - QMUIKit (4.6.1):
     - QMUIKit/QMUIComponents (= 4.6.1)
     - QMUIKit/QMUICore (= 4.6.1)
@@ -318,6 +319,7 @@ DEPENDENCIES:
   - Alamofire (= 4.9.1)
   - IQKeyboardManagerSwift (= 6.5.6)
   - Masonry
+  - MBProgressHUD (~> 1.2.0)
   - QMUIKit (= 4.6.1)
   - SnapKit (= 5.6.0)
   - WCDB.swift (= 1.1.0)
@@ -329,6 +331,7 @@ SPEC REPOS:
     - Alamofire
     - IQKeyboardManagerSwift
     - Masonry
+    - MBProgressHUD
     - QMUIKit
     - SnapKit
     - SQLiteRepairKit
@@ -343,6 +346,7 @@ SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   QMUIKit: e5e848e433948258f8a79e794ed68180c5f7c2e1
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SQLiteRepairKit: a66145aadae91886c800f75e16f5cc6476af1a93
@@ -353,6 +357,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 93893b0e74ebe3bdb0060b763e07d76ea97dfefc
+PODFILE CHECKSUM: 6f13cea5c5e6407b3e4f4ea7bf23f8ce78fd564d
 
 COCOAPODS: 1.13.0

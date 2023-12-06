@@ -8,11 +8,14 @@
 import UIKit
 import SnapKit
 import IQKeyboardManagerSwift
+import  MBProgressHUD
 
 class HomeEditViewController: LTBaseViewController {
 
     var model: LTHomeListModel?
     
+    var handleChangeModelCallback: (() -> Void)?
+
     lazy var homeEditView: HomeEditView = {
         let homeEditView = HomeEditView(frame: .zero)
         return homeEditView
@@ -28,6 +31,55 @@ class HomeEditViewController: LTBaseViewController {
 
         // Do any additional setup after loading the view.
         self.setUpUI()
+        
+        self.homeEditView.getModel(model: self.model ?? LTHomeListModel())
+        homeEditView.handleChooseImageCallback = { [weak self] in
+            
+            guard let self = self else { return }
+            
+            self.view.endEditing(true)
+            self.showPhotoLibraryCanEdit(false, photo: { [weak self] img in
+                
+                guard let self = self else { return }
+                
+                if let im = img {
+                    self.homeEditView.headImageView.image = im
+                    let imageName = HYLocalPathManager.saveLocalImage(im)
+                    if let m = self.homeEditView.model {
+                        m.imageName = imageName
+                    }
+                }
+                
+            })
+        }
+        
+        headNavView.handleCloseCallback = { [weak self] in
+            
+            guard let self = self else { return }
+            self.view.endEditing(true)
+            self.dismiss(animated: true)
+        }
+        
+        headNavView.handleCompleteCallback = { [weak self] in
+            
+            guard let self = self else { return }
+            
+            self.view.endEditing(true)
+
+            if let m = self.homeEditView.model {
+                MBProgressHUD.showAdded(to: self.view, animated: true)
+                Task {
+                    if let s = self.homeEditView.contentTextView.text {
+                        m.content = s
+                    }
+                    await LTHomeListLogic.share.updateData(model: m)
+                    DispatchQueue.main.async {
+                        MBProgressHUD.hide(for: self.view, animated: true)
+                        self.dismiss(animated: true)
+                    }
+                }
+            }
+        }
     }
     
     func setUpUI() {
@@ -52,6 +104,7 @@ class HomeEditViewController: LTBaseViewController {
             make.left.right.bottom.equalToSuperview()
             make.top.equalTo(self.headNavView.snp_bottom).offset(0)
         }
+        
     }
     /*
     // MARK: - Navigation

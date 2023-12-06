@@ -12,7 +12,7 @@ class LTHomeViewController: LTBaseViewController {
 
 
     var list: [LTHomeListModel] = []
-    
+        
     private lazy var cardLayout: LTCardLayout = {
         let layout = LTCardLayout()
         layout.visibleCount = 4
@@ -172,5 +172,17 @@ extension LTHomeViewController: GXCardCViewDataSource, GXCardCViewDelegate {
         let vc = HomeEditViewController()
         vc.model = self.list[index]
         self.present(vc, animated: true)
+        
+        vc.handleChangeModelCallback = { [weak self] in
+            
+            guard let self = self else { return }
+            
+            Task {
+                if let str = self.defaultNaviTitleLabel.text {
+                    self.list = await LTHomeListLogic.share.queryWithTypeName(typeName: str)
+                    self.cardView.reloadData()
+                }
+            }
+        }
     }
 }

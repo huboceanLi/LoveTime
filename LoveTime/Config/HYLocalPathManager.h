@@ -62,6 +62,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSString *)getBookFilePathBookId:(NSString *)bookId chapterId:(NSString *)chapterId;
 
++ (NSString *)getTimeStrWithString:(NSString *)str;
+
+
++ (NSString *)saveLocalImage:(UIImage *)image;
++ (NSString *)getImageFilePath:(NSString *)imagePath;
+
 @end
 
 NS_ASSUME_NONNULL_END

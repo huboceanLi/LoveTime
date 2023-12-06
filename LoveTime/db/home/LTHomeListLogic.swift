@@ -115,4 +115,9 @@ import Foundation
         
         return formattedDateTime
     }
+    
+    func updateData(model: LTHomeListModel) async {
+        
+        await LTHomeListDao.default.updateData(tid: model.tid, name: model.name, address: model.address, content: model.content, imageName: model.imageName, changeTime: model.changeTime)
+    }
 }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		45009D9988DAD7C6877B63BF /* Pods_LoveTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A80243DC442AFCEE74640BBF /* Pods_LoveTime.framework */; };
+		830FD7B02B204049000DF678 /* UIViewController+XHPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 830FD7AF2B204049000DF678 /* UIViewController+XHPhoto.m */; };
+		830FD7B22B204B27000DF678 /* TQDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830FD7B12B204B27000DF678 /* TQDatePickerView.swift */; };
 		8368957D2B1DBBB2009274AD /* BCChatRightNavMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8368957B2B1DBBB1009274AD /* BCChatRightNavMoreView.m */; };
 		8368959C2B1DCE59009274AD /* UIView+RoundedCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = 8368959B2B1DCE59009274AD /* UIView+RoundedCorners.m */; };
 		83874E882AFB5F4F00D63D2E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83874E8A2AFB5F4F00D63D2E /* Localizable.strings */; };
@@ -47,6 +49,9 @@
 /* Begin PBXFileReference section */
 		0AF700F191352C79713C4ECF /* Pods-LoveTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveTime.release.xcconfig"; path = "Target Support Files/Pods-LoveTime/Pods-LoveTime.release.xcconfig"; sourceTree = "<group>"; };
 		29D4DAA7BB8C6D26BAD91BEB /* Pods-LoveTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveTime.debug.xcconfig"; path = "Target Support Files/Pods-LoveTime/Pods-LoveTime.debug.xcconfig"; sourceTree = "<group>"; };
+		830FD7AE2B204049000DF678 /* UIViewController+XHPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+XHPhoto.h"; sourceTree = "<group>"; };
+		830FD7AF2B204049000DF678 /* UIViewController+XHPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XHPhoto.m"; sourceTree = "<group>"; };
+		830FD7B12B204B27000DF678 /* TQDatePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TQDatePickerView.swift; sourceTree = "<group>"; };
 		8368957B2B1DBBB1009274AD /* BCChatRightNavMoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCChatRightNavMoreView.m; sourceTree = "<group>"; };
 		8368957C2B1DBBB2009274AD /* BCChatRightNavMoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCChatRightNavMoreView.h; sourceTree = "<group>"; };
 		8368959A2B1DCE59009274AD /* UIView+RoundedCorners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RoundedCorners.h"; sourceTree = "<group>"; };
@@ -112,6 +117,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		830FD7AD2B204049000DF678 /* XHPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				830FD7AE2B204049000DF678 /* UIViewController+XHPhoto.h */,
+				830FD7AF2B204049000DF678 /* UIViewController+XHPhoto.m */,
+			);
+			path = XHPhoto;
+			sourceTree = "<group>";
+		};
 		83874E8C2AFB752C00D63D2E /* home */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +161,7 @@
 		839677482B1EC420002DED43 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				830FD7B12B204B27000DF678 /* TQDatePickerView.swift */,
 				839677492B1ED439002DED43 /* HomeEditView.swift */,
 				8396776D2B1F02B5002DED43 /* HeadNavView.swift */,
 			);
@@ -227,6 +242,7 @@
 		9AB7A0322ADD732E00C10C9F /* UIHelper */ = {
 			isa = PBXGroup;
 			children = (
+				830FD7AD2B204049000DF678 /* XHPhoto */,
 				9AB7A0342ADD733F00C10C9F /* LTCardCell.swift */,
 				9AB7A0352ADD733F00C10C9F /* LTCardLayout.swift */,
 				9AB7A0332ADD733E00C10C9F /* LTCardView.swift */,
@@ -416,6 +432,8 @@
 				8368959C2B1DCE59009274AD /* UIView+RoundedCorners.m in Sources */,
 				9AB7A0372ADD733F00C10C9F /* LTCardCell.swift in Sources */,
 				83E42F6F2ADCC679009D3D99 /* ViewController.swift in Sources */,
+				830FD7B02B204049000DF678 /* UIViewController+XHPhoto.m in Sources */,
+				830FD7B22B204B27000DF678 /* TQDatePickerView.swift in Sources */,
 				83874EB52AFCACB700D63D2E /* HYLocalPathManager.m in Sources */,
 				83E42F6B2ADCC679009D3D99 /* AppDelegate.swift in Sources */,
 				83874E992AFB7F3500D63D2E /* LTHomeListLogic.swift in Sources */,

@@ -41,22 +41,32 @@ struct LTHomeListDao {
         }
         
         let condion: Condition = LTHomeListModel.Properties.typeName == typeName
-        let result: [LTHomeListModel]? = try? database.getObjects(fromTable: LT_LOVE_RECORD_TABLE_NAME, where: condion,orderBy: [LTHomeListModel.Properties.changeTime.asOrder(by: .descending)])
+        let result: [LTHomeListModel]? = try? database.getObjects(fromTable: LT_LOVE_RECORD_TABLE_NAME, where: condion,orderBy: [LTHomeListModel.Properties.create_Time.asOrder(by: .descending)])
         if let r = result {
             return r
         }
         return []
     }
+
     
-    func updateData(tid: Int,content: String) async {
+    func updateData(tid: Int, name: String, address: String, content: String, imageName: String, changeTime: Int) async {
+        
         guard let database = LTDataBaseTool.default.base else {
             return
         }
         let entity = LTHomeListModel()
+        entity.name = name
+        entity.address = address
         entity.content = content
-        
+        entity.imageName = imageName
+        entity.changeTime = changeTime
+        entity.create_Time = LTHomeListLogic.share.getNowTime()
         let properites = [
+            LTHomeListModel.Properties.name,
+            LTHomeListModel.Properties.address,
             LTHomeListModel.Properties.content,
+            LTHomeListModel.Properties.imageName,
+            LTHomeListModel.Properties.changeTime,
         ]
         
         do {

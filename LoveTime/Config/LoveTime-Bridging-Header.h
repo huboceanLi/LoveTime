@@ -6,3 +6,4 @@
 #import "BCChatRightNavMoreView.h"
 #import "UIView+RoundedCorners.h"
 #import "LTDefine.h"
+#import "UIViewController+XHPhoto.h"

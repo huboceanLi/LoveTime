@@ -33,7 +33,7 @@ class HomeCardCell: LTCardCell {
         if let img = UIImage.init(named: model.imageName) {
             self.headImageView.image = img
         }else {
-            self.headImageView.yy_setImage(with: URL(fileURLWithPath: model.imageName))
+            self.headImageView.yy_setImage(with: URL(fileURLWithPath: HYLocalPathManager.getImageFilePath(model.imageName)))
         }
     }
 }
