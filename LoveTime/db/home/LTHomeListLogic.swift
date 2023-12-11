@@ -83,8 +83,8 @@ import Foundation
     func getTime() -> Int {
         // 创建一个指定时间的日期对象
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        if let specifiedDate = dateFormatter.date(from: "2023-05-20 00:00:00") {
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        if let specifiedDate = dateFormatter.date(from: "2023-05-20") {
             // 获取指定时间的毫秒级时间戳
             let millisecondsSince1970 = Int(specifiedDate.timeIntervalSince1970 * 1000)
             print("指定时间的毫秒级时间戳: \(millisecondsSince1970)")

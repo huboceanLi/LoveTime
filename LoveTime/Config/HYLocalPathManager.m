@@ -270,21 +270,21 @@
     
     NSArray *tempArr = [NSArray arrayWithContentsOfFile:filePath];
     
-    for (NSDictionary *item in tempArr) {
+    for (int i = 0; i < tempArr.count; i++) {
+        NSDictionary *item = tempArr[i];
         NSString *typeName = item[@"name"];
         NSArray *desArr = item[@"des"];
         
         for (NSDictionary *desItem in desArr) {
             LTLoveTempModel *itemModel = [LTLoveTempModel new];
             itemModel.typeName = typeName;
-            itemModel.type = [desItem[@"type"] intValue];
+            itemModel.type = i + 1;
             itemModel.imageName = desItem[@"img"];
             itemModel.name = desItem[@"title"];
             [array addObject:itemModel];
         }
     }
-    
-    
+
     return array;
 }
 

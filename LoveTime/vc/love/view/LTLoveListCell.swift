@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import YYWebImage
 
 class LTLoveListCell: UICollectionViewCell {
 
@@ -49,6 +50,16 @@ class LTLoveListCell: UICollectionViewCell {
         }
     }
 
+    func getModel(model: LTLoveListModel)  {
+        
+        if let img = UIImage.init(named: model.imageName) {
+            self.headImageView.image = img
+        }else {
+            self.headImageView.yy_setImage(with: URL(fileURLWithPath: HYLocalPathManager.getImageFilePath(model.imageName)))
+        }
+        self.desLab.text = model.name
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

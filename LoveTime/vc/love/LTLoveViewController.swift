@@ -19,7 +19,8 @@ class LTLoveViewController: LTBaseViewController {
         return loveHeadView
     }()
     
-    
+    var lsatMap: [String: [LTLoveListModel]] = [:]
+
     lazy var laout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 15
@@ -70,6 +71,8 @@ class LTLoveViewController: LTBaseViewController {
     func getData() {
         Task {
             await LTLoveListLogic.share.firstSaveData()
+            self.lsatMap = await LTLoveListLogic.share.queryAll()
+            self.collectionView.reloadData()
         }
     }
 }
@@ -77,15 +80,56 @@ class LTLoveViewController: LTBaseViewController {
 extension LTLoveViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return 4
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        
+        if section == 0 {
+            if let arr = lsatMap["爱的初体验"] {
+                return arr.count
+            }
+        }
+        if section == 1 {
+            if let arr = lsatMap["享受慢时光"] {
+                return arr.count
+            }
+        }
+        if section == 2 {
+            if let arr = lsatMap["挑战不可能"] {
+                return arr.count
+            }
+        }
+        if section == 3 {
+            if let arr = lsatMap["爱的高光时刻"] {
+                return arr.count
+            }
+        }
+        return 0
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(LTLoveListCell.classForCoder()), for: indexPath) as? LTLoveListCell else { return UICollectionViewCell() }
 
         cell.backgroundColor = UIColor.purple
+        var list: [LTLoveListModel] = []
+        if indexPath.section == 0 {
+            if let arr = lsatMap["爱的初体验"] {
+                list = arr
+            }
+        }else if indexPath.section == 1 {
+            if let arr = lsatMap["享受慢时光"] {
+                list = arr
+            }
+        }else if indexPath.section == 2 {
+            if let arr = lsatMap["挑战不可能"] {
+                list = arr
+            }
+        }else {
+            if let arr = lsatMap["爱的高光时刻"] {
+                list = arr
+            }
+        }
+        cell.getModel(model: list[indexPath.row])
+        
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -99,6 +143,15 @@ extension LTLoveViewController: UICollectionViewDelegateFlowLayout {
 
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerView", for: indexPath) as! LTLoveListHeadView
 
+        if indexPath.section == 0 {
+            header.desLab.text = "爱的初体验"
+        }else if indexPath.section == 1 {
+            header.desLab.text = "享受慢时光"
+        }else if indexPath.section == 2 {
+            header.desLab.text = "挑战不可能"
+        }else {
+            header.desLab.text = "爱的高光时刻"
+        }
 //        header.showTitle(index: indexPath.section, dic: self.dataDic)
         
         return header
