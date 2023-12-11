@@ -7,3 +7,4 @@
 #import "UIView+RoundedCorners.h"
 #import "LTDefine.h"
 #import "UIViewController+XHPhoto.h"
+#import "LTLoveTempModel.h"

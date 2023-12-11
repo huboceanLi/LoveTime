@@ -262,4 +262,30 @@
     return randomString;
 }
 
++ (NSArray <LTLoveTempModel *>*)getLoveListWithFilePath
+{
+    NSMutableArray <LTLoveTempModel *>* array = [NSMutableArray array];
+    
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"lianaiqingdan" ofType:@"plist"];
+    
+    NSArray *tempArr = [NSArray arrayWithContentsOfFile:filePath];
+    
+    for (NSDictionary *item in tempArr) {
+        NSString *typeName = item[@"name"];
+        NSArray *desArr = item[@"des"];
+        
+        for (NSDictionary *desItem in desArr) {
+            LTLoveTempModel *itemModel = [LTLoveTempModel new];
+            itemModel.typeName = typeName;
+            itemModel.type = [desItem[@"type"] intValue];
+            itemModel.imageName = desItem[@"img"];
+            itemModel.name = desItem[@"title"];
+            [array addObject:itemModel];
+        }
+    }
+    
+    
+    return array;
+}
+
 @end

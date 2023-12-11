@@ -50,6 +50,7 @@ class LTLoveViewController: LTBaseViewController {
 
         // Do any additional setup after loading the view.
         initializeUI()
+        getData()
     }
     
     func initializeUI() {
@@ -63,6 +64,12 @@ class LTLoveViewController: LTBaseViewController {
             make.left.right.equalToSuperview()
             make.bottom.equalTo(self.view.snp_bottom).offset(-UIDevice.YH_Tabbar_Height)
             make.top.equalTo(self.loveHeadView.snp_bottom).offset(0)
+        }
+    }
+    
+    func getData() {
+        Task {
+            await LTLoveListLogic.share.firstSaveData()
         }
     }
 }

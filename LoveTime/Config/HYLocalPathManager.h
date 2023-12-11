@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "LTLoveTempModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -67,6 +68,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSString *)saveLocalImage:(UIImage *)image;
 + (NSString *)getImageFilePath:(NSString *)imagePath;
+
++ (NSArray <LTLoveTempModel *>*)getLoveListWithFilePath;
 
 @end
 

@@ -13,6 +13,11 @@
 		830FD7CF2B215E57000DF678 /* LTLoveHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830FD7CE2B215E57000DF678 /* LTLoveHeadView.swift */; };
 		830FD7D12B215E65000DF678 /* LTLoveListHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830FD7D02B215E65000DF678 /* LTLoveListHeadView.swift */; };
 		830FD7D42B215EAD000DF678 /* LTLoveListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830FD7D22B215EAD000DF678 /* LTLoveListCell.swift */; };
+		830FD7D82B216B57000DF678 /* lianaiqingdan.plist in Resources */ = {isa = PBXBuildFile; fileRef = 830FD7D72B216B57000DF678 /* lianaiqingdan.plist */; };
+		830FD7DB2B216B87000DF678 /* LTLoveListDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830FD7DA2B216B87000DF678 /* LTLoveListDao.swift */; };
+		830FD7DD2B216B90000DF678 /* LTLoveListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830FD7DC2B216B90000DF678 /* LTLoveListModel.swift */; };
+		830FD7DF2B216B97000DF678 /* LTLoveListLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830FD7DE2B216B97000DF678 /* LTLoveListLogic.swift */; };
+		830FD7E22B217290000DF678 /* LTLoveTempModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 830FD7E12B217290000DF678 /* LTLoveTempModel.m */; };
 		8368957D2B1DBBB2009274AD /* BCChatRightNavMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8368957B2B1DBBB1009274AD /* BCChatRightNavMoreView.m */; };
 		8368959C2B1DCE59009274AD /* UIView+RoundedCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = 8368959B2B1DCE59009274AD /* UIView+RoundedCorners.m */; };
 		83874E882AFB5F4F00D63D2E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83874E8A2AFB5F4F00D63D2E /* Localizable.strings */; };
@@ -61,6 +66,12 @@
 		830FD7CE2B215E57000DF678 /* LTLoveHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTLoveHeadView.swift; sourceTree = "<group>"; };
 		830FD7D02B215E65000DF678 /* LTLoveListHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTLoveListHeadView.swift; sourceTree = "<group>"; };
 		830FD7D22B215EAD000DF678 /* LTLoveListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTLoveListCell.swift; sourceTree = "<group>"; };
+		830FD7D72B216B57000DF678 /* lianaiqingdan.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = lianaiqingdan.plist; sourceTree = "<group>"; };
+		830FD7DA2B216B87000DF678 /* LTLoveListDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTLoveListDao.swift; sourceTree = "<group>"; };
+		830FD7DC2B216B90000DF678 /* LTLoveListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTLoveListModel.swift; sourceTree = "<group>"; };
+		830FD7DE2B216B97000DF678 /* LTLoveListLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTLoveListLogic.swift; sourceTree = "<group>"; };
+		830FD7E02B217290000DF678 /* LTLoveTempModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTLoveTempModel.h; sourceTree = "<group>"; };
+		830FD7E12B217290000DF678 /* LTLoveTempModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTLoveTempModel.m; sourceTree = "<group>"; };
 		8368957B2B1DBBB1009274AD /* BCChatRightNavMoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCChatRightNavMoreView.m; sourceTree = "<group>"; };
 		8368957C2B1DBBB2009274AD /* BCChatRightNavMoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCChatRightNavMoreView.h; sourceTree = "<group>"; };
 		8368959A2B1DCE59009274AD /* UIView+RoundedCorners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RoundedCorners.h"; sourceTree = "<group>"; };
@@ -148,6 +159,18 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		830FD7D92B216B70000DF678 /* lovelist */ = {
+			isa = PBXGroup;
+			children = (
+				830FD7DA2B216B87000DF678 /* LTLoveListDao.swift */,
+				830FD7DC2B216B90000DF678 /* LTLoveListModel.swift */,
+				830FD7DE2B216B97000DF678 /* LTLoveListLogic.swift */,
+				830FD7E02B217290000DF678 /* LTLoveTempModel.h */,
+				830FD7E12B217290000DF678 /* LTLoveTempModel.m */,
+			);
+			path = lovelist;
+			sourceTree = "<group>";
+		};
 		83874E8C2AFB752C00D63D2E /* home */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +184,7 @@
 		83874E8F2AFB759B00D63D2E /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				830FD7D72B216B57000DF678 /* lianaiqingdan.plist */,
 				83874EB42AFCACB700D63D2E /* HYLocalPathManager.h */,
 				83874EB32AFCACB700D63D2E /* HYLocalPathManager.m */,
 				83874E902AFB75B100D63D2E /* 锐字真言体.ttf */,
@@ -325,6 +349,7 @@
 		9AB7A04E2ADD775900C10C9F /* db */ = {
 			isa = PBXGroup;
 			children = (
+				830FD7D92B216B70000DF678 /* lovelist */,
 				83874E8C2AFB752C00D63D2E /* home */,
 				9AB7A04F2ADD777500C10C9F /* LTDataBaseTool.swift */,
 			);
@@ -411,6 +436,7 @@
 				83E42F742ADCC67A009D3D99 /* Assets.xcassets in Resources */,
 				83E42F722ADCC679009D3D99 /* Main.storyboard in Resources */,
 				9AACCAF22B25B46C00D81606 /* LTMyCell.xib in Resources */,
+				830FD7D82B216B57000DF678 /* lianaiqingdan.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,8 +508,10 @@
 				9AB7A0502ADD777500C10C9F /* LTDataBaseTool.swift in Sources */,
 				83874E972AFB7F2200D63D2E /* LTHomeListDao.swift in Sources */,
 				83874E8E2AFB755D00D63D2E /* LTHomeListModel.swift in Sources */,
+				830FD7DF2B216B97000DF678 /* LTLoveListLogic.swift in Sources */,
 				9AB7A03C2ADD73E300C10C9F /* LTBaseViewController.swift in Sources */,
 				9AB7A0432ADD745800C10C9F /* UIDevice+YHExtension.swift in Sources */,
+				830FD7DB2B216B87000DF678 /* LTLoveListDao.swift in Sources */,
 				9AB7A0422ADD745800C10C9F /* UIColor+YX.swift in Sources */,
 				839677472B1EC37D002DED43 /* HomeEditViewController.swift in Sources */,
 				9AB7A04D2ADD771D00C10C9F /* LTMyViewController.swift in Sources */,
@@ -491,8 +519,10 @@
 				8396776C2B1EFC69002DED43 /* LTDefine.m in Sources */,
 				9AB7A0382ADD733F00C10C9F /* LTCardLayout.swift in Sources */,
 				9AB7A0472ADD76FD00C10C9F /* LTHomeViewController.swift in Sources */,
+				830FD7E22B217290000DF678 /* LTLoveTempModel.m in Sources */,
 				9AB7A04A2ADD770E00C10C9F /* LTLoveViewController.swift in Sources */,
 				9AB7A0442ADD745800C10C9F /* UIView+YHExtension.swift in Sources */,
+				830FD7DD2B216B90000DF678 /* LTLoveListModel.swift in Sources */,
 				8396776E2B1F02B5002DED43 /* HeadNavView.swift in Sources */,
 				9AACCAEE2B25B41000D81606 /* MYHeadView.swift in Sources */,
 				9AB7A0362ADD733F00C10C9F /* LTCardView.swift in Sources */,
