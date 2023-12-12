@@ -48,4 +48,27 @@ struct LTLoveListDao {
         return []
     }
     
+    func updateData(tid: Int, name: String, content: String, imageName: String) async {
+        
+        guard let database = LTDataBaseTool.default.base else {
+            return
+        }
+        let entity = LTLoveListModel()
+        entity.name = name
+        entity.content = content
+        entity.imageName = imageName
+        entity.changeTime = LTHomeListLogic.share.getNowTime()
+        let properites = [
+            LTLoveListModel.Properties.name,
+            LTLoveListModel.Properties.content,
+            LTLoveListModel.Properties.imageName,
+            LTLoveListModel.Properties.changeTime,
+        ]
+        
+        do {
+            try database.update(table: LT_LOVE_LIST_TABLE_NAME, on: properites, with: entity, where: LTLoveListModel.Properties.ltId == tid)
+        } catch {
+            print("\(#function) updateData error is \(error)")
+        }
+    }
 }

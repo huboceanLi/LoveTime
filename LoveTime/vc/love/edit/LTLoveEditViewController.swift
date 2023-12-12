@@ -1,8 +1,8 @@
 //
-//  HomeEditViewController.swift
+//  LTLoveEditViewController.swift
 //  LoveTime
 //
-//  Created by oceanMAC on 2023/12/5.
+//  Created by oceanMAC on 2023/12/12.
 //
 
 import UIKit
@@ -10,30 +10,30 @@ import SnapKit
 import IQKeyboardManagerSwift
 import MBProgressHUD
 
-class HomeEditViewController: LTBaseViewController {
+class LTLoveEditViewController: LTBaseViewController {
 
-    var model: LTHomeListModel?
+    var model: LTLoveListModel?
     
     var handleChangeModelCallback: (() -> Void)?
 
-    lazy var homeEditView: HomeEditView = {
-        let homeEditView = HomeEditView(frame: .zero)
-        return homeEditView
-    }()
-    
     lazy var headNavView: HeadNavView = {
         let headNavView = HeadNavView(frame: .zero)
         return headNavView
+    }()
+    
+    lazy var editView: LTLoveEditView = {
+        let editView = LTLoveEditView(frame: .zero)
+        return editView
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.setUpUI()
+        setUpUI()
         
-        self.homeEditView.getModel(model: self.model ?? LTHomeListModel())
-        homeEditView.handleChooseImageCallback = { [weak self] in
+        self.editView.getModel(model: self.model ?? LTLoveListModel())
+        editView.handleChooseImageCallback = { [weak self] in
             
             guard let self = self else { return }
             
@@ -43,9 +43,9 @@ class HomeEditViewController: LTBaseViewController {
                 guard let self = self else { return }
                 
                 if let im = img {
-                    self.homeEditView.headImageView.image = im
+                    self.editView.headImageView.image = im
                     let imageName = HYLocalPathManager.saveLocalImage(im)
-                    if let m = self.homeEditView.model {
+                    if let m = self.editView.model {
                         m.imageName = imageName
                     }
                 }
@@ -66,13 +66,13 @@ class HomeEditViewController: LTBaseViewController {
             
             self.view.endEditing(true)
 
-            if let m = self.homeEditView.model {
+            if let m = self.editView.model {
                 MBProgressHUD.showAdded(to: self.view, animated: true)
                 Task {
-                    if let s = self.homeEditView.contentTextView.text {
+                    if let s = self.editView.contentTextView.text {
                         m.content = s
                     }
-                    await LTHomeListLogic.share.updateData(model: m)
+                    await LTLoveListLogic.share.updateData(model: m)
                     DispatchQueue.main.async {
                         MBProgressHUD.hide(for: self.view, animated: true)
                         self.handleChangeModelCallback?()
@@ -82,7 +82,7 @@ class HomeEditViewController: LTBaseViewController {
             }
         }
     }
-    
+
     func setUpUI() {
         self.view.addSubview(headNavView)
 
@@ -90,31 +90,18 @@ class HomeEditViewController: LTBaseViewController {
             make.left.right.top.equalToSuperview()
             make.height.equalTo(56)
         }
-        
         self.view.backgroundColor = .red
-//        self.cusNaviBar.hideNaviBar = false
-//        self.cusNaviBar.backgroundColor = UIColor.green
-//        self.cusNaviBar.YH_Height = 50
-//        self.cusNaviBar.reloadUI(origin: .zero, width: UIDevice.YH_Width)
+
         
         IQKeyboardManager.shared.enableAutoToolbar = true
 
-        self.view.addSubview(homeEditView)
+        self.view.addSubview(editView)
 
-        homeEditView.snp.makeConstraints { make in
+        editView.snp.makeConstraints { make in
             make.left.right.bottom.equalToSuperview()
             make.top.equalTo(self.headNavView.snp_bottom).offset(0)
         }
         
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -134,6 +134,34 @@ extension LTLoveViewController: UICollectionViewDataSource, UICollectionViewDele
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
+        let vc = LTLoveEditViewController()
+        if indexPath.section == 0 {
+            if let arr = lsatMap["爱的初体验"] {
+                vc.model = arr[indexPath.row]
+            }
+        }else if indexPath.section == 1 {
+            if let arr = lsatMap["享受慢时光"] {
+                vc.model = arr[indexPath.row]
+            }
+        }else if indexPath.section == 2 {
+            if let arr = lsatMap["挑战不可能"] {
+                vc.model = arr[indexPath.row]
+            }
+        }else {
+            if let arr = lsatMap["爱的高光时刻"] {
+                vc.model = arr[indexPath.row]
+            }
+        }
+        self.present(vc, animated: true)
+        vc.handleChangeModelCallback = { [weak self] in
+            guard let self = self else {
+                return
+            }
+            Task {
+                self.lsatMap = await LTLoveListLogic.share.queryAll()
+                self.collectionView.reloadData()
+            }
+        }
     }
 }
 

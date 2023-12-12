@@ -70,4 +70,8 @@ import Foundation
         return lsatMap
     }
     
+    func updateData(model: LTLoveListModel) async {
+        
+        await LTLoveListDao.default.updateData(tid: model.ltId ?? 0, name: model.name, content: model.content, imageName: model.imageName)
+    }
 }
