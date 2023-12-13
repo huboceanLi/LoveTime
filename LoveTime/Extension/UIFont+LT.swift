@@ -14,7 +14,7 @@ extension UIFont {
         let font = UIFont.init(name: "ZhenyanGB", size: fontSize)
         return font
     }
-    @objc static func bc_QisimomoFont(ofSize fontSize: CGFloat) -> UIFont? {
+    @objc static func lt_QisimomoFont(ofSize fontSize: CGFloat) -> UIFont? {
         //let font = UIFont.init(name: "Plus Jakarta Sans SemiBold", size: fontSize)
         let font = UIFont.init(name: "Qisimomo_xinjian", size: fontSize)
         return font

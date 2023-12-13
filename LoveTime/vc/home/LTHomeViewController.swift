@@ -52,12 +52,12 @@ class LTHomeViewController: LTBaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.red
+        self.view.backgroundColor = UIColor.clear
         
 //        let welcomeMessage = NSLocalizedString("生活", comment: "test456")
 
         self.cusNaviBar.hideNaviBar = false
-        self.cusNaviBar.backgroundColor = UIColor.green
+        self.cusNaviBar.backgroundColor = UIColor.clear
         self.defaultNaviBackButton.isHidden = true
         self.cusNaviBar.rightItems = self.rightItems
         self.cusNaviBar.reloadUI(origin: .zero, width: UIDevice.YH_Width)

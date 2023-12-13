@@ -71,6 +71,7 @@ import SnapKit
     public lazy var bgImageView: UIImageView = {
         let bgImageView = UIImageView(frame: .zero)
         bgImageView.image = UIImage.init(named: "bg")
+//        bgImageView.contentMode = .scaleAspectFit
         return bgImageView
     }()
     
@@ -85,8 +86,8 @@ import SnapKit
         self.view.addSubview(bgImageView)
 
         bgImageView.snp.makeConstraints { make in
-            make.left.right.top.equalToSuperview()
-            make.height.equalTo(UIDevice.YH_Width)
+            make.left.right.top.bottom.equalToSuperview()
+//            make.height.equalTo(UIDevice.YH_Width)
         }
     }
     

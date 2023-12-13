@@ -30,7 +30,7 @@ class LTDataBaseTool : NSObject {
         self.base = dbBase
         LTHomeListDao.default.createTable(database: dbBase)
         LTLoveListDao.default.createTable(database: dbBase)
-//        HYUkSearchKeyDao.default.createTable(database: dbBase)
+        LTLoginDao.default.createTable(database: dbBase)
 //        HYUkHistoryRecordDao.default.createTable(database: dbBase)
 //        HYUkDownListDao.default.createTable(database: dbBase)
 //        HYUKNoticeListDao.default.createTable(database: dbBase)

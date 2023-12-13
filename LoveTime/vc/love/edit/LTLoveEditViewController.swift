@@ -32,6 +32,8 @@ class LTLoveEditViewController: LTBaseViewController {
         // Do any additional setup after loading the view.
         setUpUI()
         
+        IQKeyboardManager.shared.enableAutoToolbar = true
+
         self.editView.getModel(model: self.model ?? LTLoveListModel())
         editView.handleChooseImageCallback = { [weak self] in
             
