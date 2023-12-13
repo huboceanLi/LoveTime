@@ -10,6 +10,8 @@ import SnapKit
 
 class LTMyViewController: LTBaseViewController {
 
+    var list = [["情侣壁纸","情侣日记","情侣时钟"],["隐私协议","评价我们","关于我们","注销账号","退出登录"]]
+    
     private lazy var headView: MYHeadView = {
         let headView = MYHeadView()
         return headView
