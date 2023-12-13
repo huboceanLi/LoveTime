@@ -6,16 +6,45 @@
 //
 
 import UIKit
+import SnapKit
 
 class LTDiaryViewController: LTBaseViewController {
 
+    private lazy var moreButton: UIButton = {
+        let moreButton = UIButton(type: .custom)
+        moreButton.setImage(UIImage(named: "chat_list_more"), for: .normal)
+        moreButton.addTarget(self, action: #selector(moreAction), for: .touchUpInside)
+        return moreButton
+    }()
+    
+    private lazy var rightItems: [Any] = {
+        var rightSpaceItem = YHCusNavigationSpaceItem()
+        rightSpaceItem.space = 10.0
+        
+        var rightAddItem = YHCusNavigationBarItem()
+        rightAddItem.width = 40.0
+        rightAddItem.view = self.moreButton
+        
+        return [rightAddItem, rightSpaceItem]
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.cusNaviBar.hideNaviBar = false
+        self.defaultNaviTitleLabel.text = "情侣日记"
+        self.cusNaviBar.rightItems = self.rightItems
+        self.cusNaviBar.backgroundColor = UIColor.clear
+        self.cusNaviBar.reloadUI(origin: .zero, width: UIDevice.YH_Width)
+        
+
     }
     
-
+    @objc private func moreAction() {
+        let vc = LTDiaryAddViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     /*
     // MARK: - Navigation
 

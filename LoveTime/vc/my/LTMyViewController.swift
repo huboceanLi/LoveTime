@@ -131,6 +131,24 @@ extension LTMyViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
+        if indexPath.section == 0 {
+            
+            if indexPath.row == 0 {
+                let vc = LTWallpaperViewController()
+                vc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(vc, animated: true)
+            }else if indexPath.row == 1 {
+                let vc = LTDiaryViewController()
+                vc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(vc, animated: true)
+            }else {
+                let vc = LTClockViewController()
+                vc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+            
+            return
+        }
     }
     
 }
