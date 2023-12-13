@@ -118,19 +118,16 @@ import UIKit
     
     /// Virtual Home button height (compatible with all iPhones)
     @objc static var YH_HomeIndicator_Height: CGFloat {
-        
-//        var value: CGFloat = .zero
-//        if YXDefine.isPhoneX() {
-//            if UIApplication.shared.statusBarOrientation == .landscapeLeft || UIApplication.shared.statusBarOrientation == .landscapeRight {
-//                value = 21
-//            } else {
-//                value = 34
-//            }
-//        }
-//        return value
-        
-        return 0
-
+        var statusBarHeight: CGFloat = 0.0
+        if let window = UIApplication.shared.windows.first {
+            let topPadding: CGFloat = window.safeAreaInsets.bottom
+            if topPadding > 0 {
+                statusBarHeight = topPadding
+            }else {
+                statusBarHeight = 0.0
+            }
+        }
+        return statusBarHeight
     }
     
     /// Is the simulator iPhone X

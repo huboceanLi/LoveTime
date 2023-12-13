@@ -9,10 +9,12 @@ import UIKit
 import SnapKit
 import QMUIKit
 import YYWebImage
+import HYText
 
 class LTLoginView: UIView {
 
     var handleLoginCallback: ((String,String) -> Void)?
+    var handleTapTermCallback: (() -> Void)?
 
     lazy var cionImageView: UIImageView = {
         let cionImageView = UIImageView(frame: .zero)
@@ -57,6 +59,14 @@ class LTLoginView: UIView {
         return loginButton
     }()
     
+    private lazy var termLabel: YYLabel = {
+        let termLabel = YYLabel()
+        termLabel.numberOfLines = 0
+        termLabel.textAlignment = .center
+        termLabel.font = UIFont.systemFont(ofSize: 13)
+        return termLabel
+    }()
+    
     @objc private func loginAction() {
         
         self.accountView.textFiled.resignFirstResponder()
@@ -86,6 +96,7 @@ class LTLoginView: UIView {
         addSubview(accountView)
         addSubview(pwdView)
         addSubview(loginButton)
+        self.addSubview(termLabel)
 
         cionImageView.snp.makeConstraints { make in
 //            make.left.equalTo(self.snp_left).offset(20)
@@ -121,8 +132,35 @@ class LTLoginView: UIView {
             make.top.equalTo(self.pwdView.snp_bottom).offset(30)
             make.height.equalTo(50)
         }
+        
+        termLabel.snp.makeConstraints { make in
+            make.bottom.equalTo(self.snp_bottom).offset(-UIDevice.YH_HomeIndicator_Height - 20)
+            make.left.equalTo(self.snp_left).offset(30)
+            make.right.equalTo(self.snp_right).offset(-30)
+        }
+        let termAttributeString = getTermAttributeString()
+        self.termLabel.attributedText = termAttributeString
     }
 
+    func getTermAttributeString() -> NSMutableAttributedString {
+        var text = "注册即表示您阅读并同意"
+        let term = "<隐私协议>"
+        text = text + term
+        let range = (text as NSString).range(of: term)
+        let attributeString = NSMutableAttributedString(string: text)
+        attributeString.yy_alignment = .center
+        attributeString.yy_font = UIFont.systemFont(ofSize: 13)
+        attributeString.yy_color = UIColor.black
+        attributeString.yy_setUnderlineStyle(.single, range: range)
+        attributeString.yy_setUnderlineColor(UIColor.color4F80FF(), range: range)
+        attributeString.yy_setTextHighlight(range, color: UIColor.color4F80FF(), backgroundColor: UIColor.clear) { [weak self] (_, _, _, _) in
+            guard let _self = self else { return }
+            
+            _self.handleTapTermCallback?()
+        }
+        return attributeString
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

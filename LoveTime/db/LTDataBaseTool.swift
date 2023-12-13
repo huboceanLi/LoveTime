@@ -28,6 +28,11 @@ class LTDataBaseTool : NSObject {
             return
         }
         self.base = dbBase
+        
+        let password = "LHY".data(using: .ascii)
+
+        dbBase.setCipher(key: password)
+
         LTHomeListDao.default.createTable(database: dbBase)
         LTLoveListDao.default.createTable(database: dbBase)
         LTLoginDao.default.createTable(database: dbBase)
