@@ -7,5 +7,10 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>JBR.ttf</string>
+		<string>锐字真言体.ttf</string>
+	</array>
 </dict>
 </plist>

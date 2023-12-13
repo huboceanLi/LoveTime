@@ -20,6 +20,7 @@
 		830FD7E22B217290000DF678 /* LTLoveTempModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 830FD7E12B217290000DF678 /* LTLoveTempModel.m */; };
 		832482282B28454300DB44A9 /* LTLoveEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832482272B28454300DB44A9 /* LTLoveEditViewController.swift */; };
 		8324822B2B2847A300DB44A9 /* LTLoveEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8324822A2B2847A300DB44A9 /* LTLoveEditView.swift */; };
+		832482332B29541C00DB44A9 /* UIFont+LT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832482322B29541C00DB44A9 /* UIFont+LT.swift */; };
 		8368957D2B1DBBB2009274AD /* BCChatRightNavMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8368957B2B1DBBB1009274AD /* BCChatRightNavMoreView.m */; };
 		8368959C2B1DCE59009274AD /* UIView+RoundedCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = 8368959B2B1DCE59009274AD /* UIView+RoundedCorners.m */; };
 		83874E882AFB5F4F00D63D2E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83874E8A2AFB5F4F00D63D2E /* Localizable.strings */; };
@@ -76,6 +77,7 @@
 		830FD7E12B217290000DF678 /* LTLoveTempModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTLoveTempModel.m; sourceTree = "<group>"; };
 		832482272B28454300DB44A9 /* LTLoveEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTLoveEditViewController.swift; sourceTree = "<group>"; };
 		8324822A2B2847A300DB44A9 /* LTLoveEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTLoveEditView.swift; sourceTree = "<group>"; };
+		832482322B29541C00DB44A9 /* UIFont+LT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+LT.swift"; sourceTree = "<group>"; };
 		8368957B2B1DBBB1009274AD /* BCChatRightNavMoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCChatRightNavMoreView.m; sourceTree = "<group>"; };
 		8368957C2B1DBBB2009274AD /* BCChatRightNavMoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCChatRightNavMoreView.h; sourceTree = "<group>"; };
 		8368959A2B1DCE59009274AD /* UIView+RoundedCorners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RoundedCorners.h"; sourceTree = "<group>"; };
@@ -335,6 +337,7 @@
 				9AB7A03F2ADD745700C10C9F /* UIColor+YX.swift */,
 				9AB7A0402ADD745800C10C9F /* UIDevice+YHExtension.swift */,
 				9AB7A0412ADD745800C10C9F /* UIView+YHExtension.swift */,
+				832482322B29541C00DB44A9 /* UIFont+LT.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -545,6 +548,7 @@
 				9AB7A0472ADD76FD00C10C9F /* LTHomeViewController.swift in Sources */,
 				830FD7E22B217290000DF678 /* LTLoveTempModel.m in Sources */,
 				9AB7A04A2ADD770E00C10C9F /* LTLoveViewController.swift in Sources */,
+				832482332B29541C00DB44A9 /* UIFont+LT.swift in Sources */,
 				9AB7A0442ADD745800C10C9F /* UIView+YHExtension.swift in Sources */,
 				830FD7DD2B216B90000DF678 /* LTLoveListModel.swift in Sources */,
 				8396776E2B1F02B5002DED43 /* HeadNavView.swift in Sources */,
