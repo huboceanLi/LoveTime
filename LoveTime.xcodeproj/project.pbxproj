@@ -38,6 +38,11 @@
 		8324826C2B29B39400DB44A9 /* LYAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8324826B2B29B39400DB44A9 /* LYAboutViewController.swift */; };
 		8368957D2B1DBBB2009274AD /* BCChatRightNavMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8368957B2B1DBBB1009274AD /* BCChatRightNavMoreView.m */; };
 		8368959C2B1DCE59009274AD /* UIView+RoundedCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = 8368959B2B1DCE59009274AD /* UIView+RoundedCorners.m */; };
+		837F7F012B2ADB8900C64497 /* LTDiaryDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F7F002B2ADB8900C64497 /* LTDiaryDao.swift */; };
+		837F7F032B2ADB9200C64497 /* LTDiaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F7F022B2ADB9200C64497 /* LTDiaryModel.swift */; };
+		837F7F052B2ADB9A00C64497 /* LTDiaryLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F7F042B2ADB9A00C64497 /* LTDiaryLogic.swift */; };
+		837F7F082B2ADDDA00C64497 /* LTDiaryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F7F062B2ADDDA00C64497 /* LTDiaryListCell.swift */; };
+		837F7F092B2ADDDA00C64497 /* LTDiaryListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 837F7F072B2ADDDA00C64497 /* LTDiaryListCell.xib */; };
 		83874E882AFB5F4F00D63D2E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83874E8A2AFB5F4F00D63D2E /* Localizable.strings */; };
 		83874E8E2AFB755D00D63D2E /* LTHomeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83874E8D2AFB755D00D63D2E /* LTHomeListModel.swift */; };
 		83874E932AFB75B400D63D2E /* 锐字真言体.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83874E902AFB75B100D63D2E /* 锐字真言体.ttf */; };
@@ -114,6 +119,11 @@
 		8368957C2B1DBBB2009274AD /* BCChatRightNavMoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCChatRightNavMoreView.h; sourceTree = "<group>"; };
 		8368959A2B1DCE59009274AD /* UIView+RoundedCorners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RoundedCorners.h"; sourceTree = "<group>"; };
 		8368959B2B1DCE59009274AD /* UIView+RoundedCorners.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RoundedCorners.m"; sourceTree = "<group>"; };
+		837F7F002B2ADB8900C64497 /* LTDiaryDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTDiaryDao.swift; sourceTree = "<group>"; };
+		837F7F022B2ADB9200C64497 /* LTDiaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTDiaryModel.swift; sourceTree = "<group>"; };
+		837F7F042B2ADB9A00C64497 /* LTDiaryLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTDiaryLogic.swift; sourceTree = "<group>"; };
+		837F7F062B2ADDDA00C64497 /* LTDiaryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTDiaryListCell.swift; sourceTree = "<group>"; };
+		837F7F072B2ADDDA00C64497 /* LTDiaryListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LTDiaryListCell.xib; sourceTree = "<group>"; };
 		83874E892AFB5F4F00D63D2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		83874E8B2AFB5F7500D63D2E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		83874E8D2AFB755D00D63D2E /* LTHomeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTHomeListModel.swift; sourceTree = "<group>"; };
@@ -324,6 +334,16 @@
 			path = about;
 			sourceTree = "<group>";
 		};
+		837F7EFF2B2ADB7500C64497 /* diary */ = {
+			isa = PBXGroup;
+			children = (
+				837F7F002B2ADB8900C64497 /* LTDiaryDao.swift */,
+				837F7F022B2ADB9200C64497 /* LTDiaryModel.swift */,
+				837F7F042B2ADB9A00C64497 /* LTDiaryLogic.swift */,
+			);
+			path = diary;
+			sourceTree = "<group>";
+		};
 		83874E8C2AFB752C00D63D2E /* home */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,6 +452,8 @@
 		9AACCAF72B29CC3800D81606 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				837F7F062B2ADDDA00C64497 /* LTDiaryListCell.swift */,
+				837F7F072B2ADDDA00C64497 /* LTDiaryListCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -527,6 +549,7 @@
 		9AB7A04E2ADD775900C10C9F /* db */ = {
 			isa = PBXGroup;
 			children = (
+				837F7EFF2B2ADB7500C64497 /* diary */,
 				8324823B2B295E5300DB44A9 /* login */,
 				830FD7D92B216B70000DF678 /* lovelist */,
 				83874E8C2AFB752C00D63D2E /* home */,
@@ -609,6 +632,7 @@
 				83874E882AFB5F4F00D63D2E /* Localizable.strings in Resources */,
 				83EC88862AEA6F3D00740AFF /* HomeCardCell.xib in Resources */,
 				83874E942AFB75B400D63D2E /* JBR.ttf in Resources */,
+				837F7F092B2ADDDA00C64497 /* LTDiaryListCell.xib in Resources */,
 				83874E952AFB75B400D63D2E /* reliankapian.plist in Resources */,
 				83874E932AFB75B400D63D2E /* 锐字真言体.ttf in Resources */,
 				83E42F772ADCC67A009D3D99 /* LaunchScreen.storyboard in Resources */,
@@ -679,6 +703,7 @@
 				830FD7B02B204049000DF678 /* UIViewController+XHPhoto.m in Sources */,
 				830FD7D42B215EAD000DF678 /* LTLoveListCell.swift in Sources */,
 				8324823D2B295E6300DB44A9 /* LTLoginDao.swift in Sources */,
+				837F7F012B2ADB8900C64497 /* LTDiaryDao.swift in Sources */,
 				832482412B295E7000DB44A9 /* LTLoginModel.swift in Sources */,
 				830FD7B22B204B27000DF678 /* TQDatePickerView.swift in Sources */,
 				830FD7D12B215E65000DF678 /* LTLoveListHeadView.swift in Sources */,
@@ -701,15 +726,18 @@
 				832482282B28454300DB44A9 /* LTLoveEditViewController.swift in Sources */,
 				830FD7DB2B216B87000DF678 /* LTLoveListDao.swift in Sources */,
 				9AB7A0422ADD745800C10C9F /* UIColor+YX.swift in Sources */,
+				837F7F052B2ADB9A00C64497 /* LTDiaryLogic.swift in Sources */,
 				832482562B29A86600DB44A9 /* LTLoveTabHeadView.swift in Sources */,
 				8324823A2B295D3B00DB44A9 /* LTLoginViewController.swift in Sources */,
 				832482592B29B2A200DB44A9 /* LTDiaryViewController.swift in Sources */,
+				837F7F032B2ADB9200C64497 /* LTDiaryModel.swift in Sources */,
 				8324822B2B2847A300DB44A9 /* LTLoveEditView.swift in Sources */,
 				839677472B1EC37D002DED43 /* HomeEditViewController.swift in Sources */,
 				9AB7A04D2ADD771D00C10C9F /* LTMyViewController.swift in Sources */,
 				8368957D2B1DBBB2009274AD /* BCChatRightNavMoreView.m in Sources */,
 				8324824A2B2987AA00DB44A9 /* LTInputView.swift in Sources */,
 				8396776C2B1EFC69002DED43 /* LTDefine.m in Sources */,
+				837F7F082B2ADDDA00C64497 /* LTDiaryListCell.swift in Sources */,
 				832482692B29B38700DB44A9 /* LTYisiViewController.swift in Sources */,
 				9AB7A0382ADD733F00C10C9F /* LTCardLayout.swift in Sources */,
 				9AB7A0472ADD76FD00C10C9F /* LTHomeViewController.swift in Sources */,
