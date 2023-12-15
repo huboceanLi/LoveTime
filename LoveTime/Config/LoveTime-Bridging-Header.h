@@ -9,3 +9,4 @@
 #import "UIViewController+XHPhoto.h"
 #import "LTLoveTempModel.h"
 #import "MYToast.h"
+#import "JHTheClockView.h"

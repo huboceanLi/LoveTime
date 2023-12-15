@@ -36,6 +36,8 @@
 		832482662B29B35100DB44A9 /* LTWallpaperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832482652B29B35100DB44A9 /* LTWallpaperViewController.swift */; };
 		832482692B29B38700DB44A9 /* LTYisiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832482682B29B38700DB44A9 /* LTYisiViewController.swift */; };
 		8324826C2B29B39400DB44A9 /* LYAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8324826B2B29B39400DB44A9 /* LYAboutViewController.swift */; };
+		834915042B2BE6D9009EE9C2 /* JHTheClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 834915032B2BE6D9009EE9C2 /* JHTheClockView.m */; };
+		834915082B2BEFE8009EE9C2 /* shiyongxieyi.txt in Resources */ = {isa = PBXBuildFile; fileRef = 834915072B2BEFE8009EE9C2 /* shiyongxieyi.txt */; };
 		8368957D2B1DBBB2009274AD /* BCChatRightNavMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8368957B2B1DBBB1009274AD /* BCChatRightNavMoreView.m */; };
 		8368959C2B1DCE59009274AD /* UIView+RoundedCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = 8368959B2B1DCE59009274AD /* UIView+RoundedCorners.m */; };
 		837F7F012B2ADB8900C64497 /* LTDiaryDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F7F002B2ADB8900C64497 /* LTDiaryDao.swift */; };
@@ -115,6 +117,9 @@
 		832482652B29B35100DB44A9 /* LTWallpaperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTWallpaperViewController.swift; sourceTree = "<group>"; };
 		832482682B29B38700DB44A9 /* LTYisiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTYisiViewController.swift; sourceTree = "<group>"; };
 		8324826B2B29B39400DB44A9 /* LYAboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYAboutViewController.swift; sourceTree = "<group>"; };
+		834915022B2BE6D9009EE9C2 /* JHTheClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTheClockView.h; sourceTree = "<group>"; };
+		834915032B2BE6D9009EE9C2 /* JHTheClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTheClockView.m; sourceTree = "<group>"; };
+		834915072B2BEFE8009EE9C2 /* shiyongxieyi.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = shiyongxieyi.txt; sourceTree = "<group>"; };
 		8368957B2B1DBBB1009274AD /* BCChatRightNavMoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCChatRightNavMoreView.m; sourceTree = "<group>"; };
 		8368957C2B1DBBB2009274AD /* BCChatRightNavMoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCChatRightNavMoreView.h; sourceTree = "<group>"; };
 		8368959A2B1DCE59009274AD /* UIView+RoundedCorners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RoundedCorners.h"; sourceTree = "<group>"; };
@@ -305,6 +310,8 @@
 		832482612B29B32B00DB44A9 /* clock */ = {
 			isa = PBXGroup;
 			children = (
+				834915022B2BE6D9009EE9C2 /* JHTheClockView.h */,
+				834915032B2BE6D9009EE9C2 /* JHTheClockView.m */,
 				832482622B29B33700DB44A9 /* LTClockViewController.swift */,
 			);
 			path = clock;
@@ -321,6 +328,7 @@
 		832482672B29B37D00DB44A9 /* yisi */ = {
 			isa = PBXGroup;
 			children = (
+				834915072B2BEFE8009EE9C2 /* shiyongxieyi.txt */,
 				832482682B29B38700DB44A9 /* LTYisiViewController.swift */,
 			);
 			path = yisi;
@@ -636,6 +644,7 @@
 				83874E952AFB75B400D63D2E /* reliankapian.plist in Resources */,
 				83874E932AFB75B400D63D2E /* 锐字真言体.ttf in Resources */,
 				83E42F772ADCC67A009D3D99 /* LaunchScreen.storyboard in Resources */,
+				834915082B2BEFE8009EE9C2 /* shiyongxieyi.txt in Resources */,
 				83E42F742ADCC67A009D3D99 /* Assets.xcassets in Resources */,
 				83E42F722ADCC679009D3D99 /* Main.storyboard in Resources */,
 				9AACCAF22B25B46C00D81606 /* LTMyCell.xib in Resources */,
@@ -734,6 +743,7 @@
 				8324822B2B2847A300DB44A9 /* LTLoveEditView.swift in Sources */,
 				839677472B1EC37D002DED43 /* HomeEditViewController.swift in Sources */,
 				9AB7A04D2ADD771D00C10C9F /* LTMyViewController.swift in Sources */,
+				834915042B2BE6D9009EE9C2 /* JHTheClockView.m in Sources */,
 				8368957D2B1DBBB2009274AD /* BCChatRightNavMoreView.m in Sources */,
 				8324824A2B2987AA00DB44A9 /* LTInputView.swift in Sources */,
 				8396776C2B1EFC69002DED43 /* LTDefine.m in Sources */,

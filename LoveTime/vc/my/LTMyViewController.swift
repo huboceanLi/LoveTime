@@ -11,7 +11,8 @@ import SnapKit
 class LTMyViewController: LTBaseViewController {
 
     var list = [["情侣壁纸","情侣日记","情侣时钟"],["隐私协议","评价我们","关于我们","注销账号","退出登录"]]
-    
+    var imageList = [["H-slim","icon_diary","shizhong"],["yinsi","pingjia","guanyu","zhuxiao","jinru"]]
+
     private lazy var headView: MYHeadView = {
         let headView = MYHeadView()
         return headView
@@ -102,6 +103,7 @@ extension LTMyViewController: UITableViewDataSource, UITableViewDelegate {
         cell.selectionStyle = .none
         cell.backgroundColor = UIColor.clear
         cell.name.text = self.list[indexPath.section][indexPath.row]
+        cell.headImageView.image = UIImage(named: self.imageList[indexPath.section][indexPath.row])
         
         return cell
     }
@@ -143,6 +145,23 @@ extension LTMyViewController: UITableViewDataSource, UITableViewDelegate {
                 self.navigationController?.pushViewController(vc, animated: true)
             }else {
                 let vc = LTClockViewController()
+                vc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+            
+            return
+        }
+        
+        if indexPath.section == 1 {
+            
+            if indexPath.row == 0 {
+                let vc = LTYisiViewController()
+                vc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(vc, animated: true)
+            }else if indexPath.row == 1 {
+
+            }else {
+                let vc = LYAboutViewController()
                 vc.hidesBottomBarWhenPushed = true
                 self.navigationController?.pushViewController(vc, animated: true)
             }

@@ -17,7 +17,6 @@ class LTLoveEditView: UIView {
 
     lazy var headImageView: UIImageView = {
         let headImageView = UIImageView(frame: .zero)
-        headImageView.backgroundColor = UIColor.purple
         headImageView.isUserInteractionEnabled = true
         headImageView.layer.cornerRadius = 8.0
         headImageView.layer.masksToBounds = true

@@ -17,8 +17,30 @@ class LTDiaryPrewViewController: LTBaseViewController {
             self.nameLab.text = self.model.name
             self.timeLab.text = LTHomeListLogic.share.convertTimestampToDateTime(timestamp: TimeInterval(self.model.create_Time/1000))
             self.contentLab.text = self.model.content
+            
+            let contentH = self.model.content.boundingRect(with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: UIDevice.YH_Width - 40), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15)], context: nil).size.height + 1
+            
+            self.contentLab.snp.remakeConstraints { make in
+                make.left.equalTo(self.view.snp_left).offset(20)
+                make.right.equalTo(self.view.snp_right).offset(-20)
+                make.top.equalTo(self.timeLab.snp_bottom).offset(10)
+                make.height.equalTo(contentH)
+            }
+            
+            var allH = contentH + 20 + 30 + 10 + 20
+
+            if allH <= UIDevice.YH_Height - UIDevice.YH_Nav_Height {
+                allH = UIDevice.YH_Height - UIDevice.YH_Nav_Height
+            }
+            self.scrollView.contentSize = CGSize(width: UIDevice.YH_Width, height: allH)
+            
         }
     }
+    
+    lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView(frame: .zero)
+        return scrollView
+    }()
     
     lazy var nameLab: UILabel = {
         let nameLab = UILabel(frame: .zero)
@@ -49,14 +71,21 @@ class LTDiaryPrewViewController: LTBaseViewController {
         self.cusNaviBar.backgroundColor = UIColor.clear
         self.cusNaviBar.reloadUI(origin: .zero, width: UIDevice.YH_Width)
         
-        self.view.addSubview(nameLab)
-        self.view.addSubview(timeLab)
-        self.view.addSubview(contentLab)
+        self.view.addSubview(scrollView)
+        self.scrollView.addSubview(nameLab)
+        self.scrollView.addSubview(timeLab)
+        self.scrollView.addSubview(contentLab)
+        
+        scrollView.snp.makeConstraints { make in
+            make.left.bottom.equalToSuperview()
+            make.width.equalTo(UIDevice.YH_Width)
+            make.top.equalTo(self.cusNaviBar.snp_bottom).offset(20)
+        }
         
         self.nameLab.snp.makeConstraints { make in
             make.left.equalTo(self.view.snp_left).offset(20)
             make.right.equalTo(self.view.snp_right).offset(-20)
-            make.top.equalTo(self.cusNaviBar.snp_bottom).offset(20)
+            make.top.equalTo(self.scrollView.snp_top).offset(20)
             make.height.equalTo(30)
         }
 
@@ -67,6 +96,7 @@ class LTDiaryPrewViewController: LTBaseViewController {
             make.height.equalTo(20)
         }
         
+
 //        self.contentLab.snp.makeConstraints { make in
 //            make.left.equalTo(self.view.snp_left).offset(20)
 //            make.right.equalTo(self.view.snp_right).offset(-20)

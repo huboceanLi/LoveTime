@@ -6,13 +6,36 @@
 //
 
 import UIKit
+import SnapKit
 
 class LTClockViewController: LTBaseViewController {
 
+    private lazy var clockView: JHTheClockView = {
+        let clockView = JHTheClockView()
+        return clockView
+    }()
+    
+    deinit {
+        print("IMChatView deinit!!!")
+        self.clockView.removeLayer()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.cusNaviBar.hideNaviBar = false
+        self.defaultNaviTitleLabel.text = "情侣时钟"
+//        self.cusNaviBar.rightItems = self.rightItems
+        self.cusNaviBar.backgroundColor = UIColor.clear
+        self.cusNaviBar.reloadUI(origin: .zero, width: UIDevice.YH_Width)
+        
+        self.view.addSubview(clockView)
+        clockView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.height.width.equalTo(UIDevice.YH_Width / 2.0)
+            make.top.equalTo(self.cusNaviBar.snp_bottom).offset(30)
+        }
     }
     
 

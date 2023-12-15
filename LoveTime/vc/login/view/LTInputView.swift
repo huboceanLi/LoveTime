@@ -14,7 +14,6 @@ class LTInputView: UIView {
 
     lazy var cionImageView: UIImageView = {
         let cionImageView = UIImageView(frame: .zero)
-        cionImageView.backgroundColor = UIColor.purple
         return cionImageView
     }()
     

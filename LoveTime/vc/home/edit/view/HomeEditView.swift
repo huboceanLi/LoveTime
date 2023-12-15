@@ -30,7 +30,7 @@ class HomeEditView: UIView {
     
     lazy var nameImageView: UIImageView = {
         let nameImageView = UIImageView(frame: .zero)
-        nameImageView.backgroundColor = UIColor.green
+        nameImageView.image = UIImage(named: "bumenmingcheng")
         return nameImageView
     }()
     
@@ -46,7 +46,7 @@ class HomeEditView: UIView {
     
     lazy var addressImageView: UIImageView = {
         let addressImageView = UIImageView(frame: .zero)
-        addressImageView.backgroundColor = UIColor.green
+        addressImageView.image = UIImage(named: "dizhi")
         return addressImageView
     }()
    
@@ -62,15 +62,13 @@ class HomeEditView: UIView {
     
     lazy var timeImageView: UIImageView = {
         let timeImageView = UIImageView(frame: .zero)
-        timeImageView.backgroundColor = UIColor.green
-    
+        timeImageView.image = UIImage(named: "shijian")
         return timeImageView
     }()
     
     lazy var timeLab: UILabel = {
         let timeLab = UILabel(frame: .zero)
         timeLab.font = UIFont.systemFont(ofSize: 15)
-        timeLab.backgroundColor = UIColor.green
         timeLab.isUserInteractionEnabled = true
         let tap = UITapGestureRecognizer.init()
         tap.addTarget(self, action: #selector(timeView(gestrue:)))
@@ -86,6 +84,7 @@ class HomeEditView: UIView {
     
     lazy var contentTextView: QMUITextView = {
         let contentTextView = QMUITextView(frame: .zero)
+        contentTextView.backgroundColor = UIColor.clear
         contentTextView.font = UIFont.systemFont(ofSize: 15)
         contentTextView.placeholder = "留下足迹..."
         return contentTextView

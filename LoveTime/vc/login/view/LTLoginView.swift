@@ -37,6 +37,7 @@ class LTLoginView: UIView {
         let accountView = LTInputView()
         accountView.textFiled.maximumTextLength = 11
         accountView.textFiled.placeholder = "账号名..."
+        accountView.cionImageView.image = UIImage(named: "zhanghaozhongxinzhanghaoguanli")
         return accountView
     }()
     
@@ -44,6 +45,7 @@ class LTLoginView: UIView {
         let pwdView = LTInputView()
         pwdView.textFiled.maximumTextLength = 12
         pwdView.textFiled.placeholder = "登录密码..."
+        pwdView.cionImageView.image = UIImage(named: "weibiaoti--")
         pwdView.textFiled.isSecureTextEntry = true
         return pwdView
     }()

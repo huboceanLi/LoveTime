@@ -32,7 +32,7 @@ class LTHomeViewController: LTBaseViewController {
     
     private lazy var moreButton: UIButton = {
         let moreButton = UIButton(type: .custom)
-        moreButton.setImage(UIImage(named: "chat_list_more"), for: .normal)
+        moreButton.setImage(UIImage(named: "caidan"), for: .normal)
         moreButton.addTarget(self, action: #selector(moreAction), for: .touchUpInside)
         return moreButton
     }()

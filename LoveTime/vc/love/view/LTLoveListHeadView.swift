@@ -13,7 +13,7 @@ class LTLoveListHeadView: UICollectionReusableView {
     
     lazy var headImageView: UIImageView = {
         let headImageView = UIImageView(frame: .zero)
-        headImageView.backgroundColor = UIColor.green
+        headImageView.image = UIImage(named: "aiqingniao")
         return headImageView
     }()
     
@@ -21,7 +21,6 @@ class LTLoveListHeadView: UICollectionReusableView {
     lazy var desLab: UILabel = {
         let desLab = UILabel(frame: .zero)
         desLab.font = UIFont.systemFont(ofSize: 16)
-        desLab.text = "情侣必备的100件事"
         return desLab
     }()
     

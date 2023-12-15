@@ -15,14 +15,14 @@ class HeadNavView: UIView {
 
     private lazy var closeButton: UIButton = {
         let closeButton = UIButton(type: .custom)
-        closeButton.setImage(UIImage(named: "chat_list_more"), for: .normal)
+        closeButton.setImage(UIImage(named: "guanbi"), for: .normal)
         closeButton.addTarget(self, action: #selector(closeAction), for: .touchUpInside)
         return closeButton
     }()
     
     private lazy var completeButton: UIButton = {
         let completeButton = UIButton(type: .custom)
-        completeButton.setImage(UIImage(named: "chat_list_more"), for: .normal)
+        completeButton.setImage(UIImage(named: "queding"), for: .normal)
         completeButton.addTarget(self, action: #selector(completeAction), for: .touchUpInside)
         return completeButton
     }()
@@ -41,7 +41,7 @@ class HeadNavView: UIView {
     }
     
     func setUpUI() {
-        self.backgroundColor = UIColor.green
+        self.backgroundColor = UIColor.clear
         addSubview(closeButton)
         addSubview(completeButton)
 
