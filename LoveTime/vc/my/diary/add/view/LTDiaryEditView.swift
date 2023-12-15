@@ -23,7 +23,7 @@ class LTDiaryEditView: UIView {
     
     lazy var lines1: UIView = {
         let lines1 = UIView(frame: .zero)
-        lines1.backgroundColor = UIColor.green
+        lines1.backgroundColor = UIColor.lightGray.withAlphaComponent(0.2)
         return lines1
     }()
     
@@ -31,6 +31,7 @@ class LTDiaryEditView: UIView {
         let contentTextView = QMUITextView(frame: .zero)
         contentTextView.font = UIFont.systemFont(ofSize: 15)
         contentTextView.placeholder = "留下足迹..."
+        contentTextView.backgroundColor = UIColor.clear
         return contentTextView
     }()
     

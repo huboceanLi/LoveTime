@@ -21,7 +21,7 @@ class LTDiaryAddViewController: LTBaseViewController {
     private lazy var moreButton: UIButton = {
         let moreButton = UIButton(type: .custom)
         moreButton.setTitle("完成", for: .normal)
-        moreButton.setTitleColor(UIColor.white, for: .normal)
+        moreButton.setTitleColor(UIColor.black, for: .normal)
         moreButton.addTarget(self, action: #selector(moreAction), for: .touchUpInside)
         return moreButton
     }()

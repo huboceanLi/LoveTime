@@ -31,7 +31,7 @@ class LTYisiViewController: LTBaseViewController {
         self.view.addSubview(contentTextView)
         contentTextView.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
-            make.top.equalTo(self.cusNaviBar.snp_bottom).offset(20)
+            make.top.equalTo(self.cusNaviBar.snp_bottom).offset(0)
             make.bottom.equalTo(self.view.snp_bottom).offset(-UIDevice.YH_HomeIndicator_Height)
         }
         

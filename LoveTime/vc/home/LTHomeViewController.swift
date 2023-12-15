@@ -101,7 +101,7 @@ class LTHomeViewController: LTBaseViewController {
         let l = ["生活","欣赏","旅行","学习","运动","时光","享受"]
         let moreView = BCChatRightNavMoreView()
         moreView.frame = CGRectMake(0, 0, UIDevice.YH_Width, UIDevice.YH_Height)
-        moreView.initUI(withItemNameArr:l, itemImageStrArr: ["chat_rightMore_newChat","chat_rightMore_addContact","chat_rightMore_scan","chat_rightMore_scan","chat_rightMore_scan","chat_rightMore_scan","chat_rightMore_scan"])
+        moreView.initUI(withItemNameArr:l, itemImageStrArr: ["icon","dashang","lvhang","xuexi","yundong-","crm_chaoshi","kongcaozuo"])
         UIApplication.shared.keyWindow?.addSubview(moreView)
         moreView.show()
         

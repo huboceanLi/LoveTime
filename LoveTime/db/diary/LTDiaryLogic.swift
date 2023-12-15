@@ -26,4 +26,31 @@ import Foundation
         
         return await LTDiaryDao.default.queryAll()
     }
+    
+    func getWallpaperList() async -> [String] {
+        
+        var l: [String] = []
+        for i in 0..<35 {
+            
+            let s = "b" + String(i + 1)
+            l.append(s)
+        }
+        
+        return self.shuffleArray(l)
+    }
+    
+    func shuffleArray<T>(_ array: [T]) -> [T] {
+        var shuffledArray = array
+        let count = shuffledArray.count
+
+        for i in 0..<count {
+            let randomIndex = Int.random(in: i..<count)
+            if i != randomIndex {
+                shuffledArray.swapAt(i, randomIndex)
+            }
+        }
+
+        return shuffledArray
+    }
 }
+

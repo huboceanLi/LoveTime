@@ -18,7 +18,7 @@ class LTDiaryPrewViewController: LTBaseViewController {
             self.timeLab.text = LTHomeListLogic.share.convertTimestampToDateTime(timestamp: TimeInterval(self.model.create_Time/1000))
             self.contentLab.text = self.model.content
             
-            let contentH = self.model.content.boundingRect(with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: UIDevice.YH_Width - 40), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15)], context: nil).size.height + 1
+            let contentH = self.model.content.boundingRect(with: CGSize(width: UIDevice.YH_Width - 40, height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15)], context: nil).size.height + 1
             
             self.contentLab.snp.remakeConstraints { make in
                 make.left.equalTo(self.view.snp_left).offset(20)
@@ -44,15 +44,16 @@ class LTDiaryPrewViewController: LTBaseViewController {
     
     lazy var nameLab: UILabel = {
         let nameLab = UILabel(frame: .zero)
-        nameLab.font = UIFont.systemFont(ofSize: 15)
+        nameLab.font = UIFont.systemFont(ofSize: 18)
         nameLab.textAlignment = .center
         return nameLab
     }()
     
     lazy var timeLab: UILabel = {
         let timeLab = UILabel(frame: .zero)
-        timeLab.font = UIFont.systemFont(ofSize: 15)
+        timeLab.font = UIFont.systemFont(ofSize: 14)
         timeLab.textAlignment = .center
+        timeLab.textColor = UIColor.color0D1324().withAlphaComponent(0.5)
         return timeLab
     }()
     
@@ -60,6 +61,7 @@ class LTDiaryPrewViewController: LTBaseViewController {
         let contentLab = UILabel(frame: .zero)
         contentLab.font = UIFont.systemFont(ofSize: 15)
         contentLab.numberOfLines = 0
+        contentLab.textColor = UIColor.color0D1324().withAlphaComponent(0.5)
         return contentLab
     }()
     override func viewDidLoad() {
@@ -75,7 +77,8 @@ class LTDiaryPrewViewController: LTBaseViewController {
         self.scrollView.addSubview(nameLab)
         self.scrollView.addSubview(timeLab)
         self.scrollView.addSubview(contentLab)
-        
+        self.scrollView.contentInsetAdjustmentBehavior = .never
+
         scrollView.snp.makeConstraints { make in
             make.left.bottom.equalToSuperview()
             make.width.equalTo(UIDevice.YH_Width)

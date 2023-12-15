@@ -38,6 +38,9 @@
 		8324826C2B29B39400DB44A9 /* LYAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8324826B2B29B39400DB44A9 /* LYAboutViewController.swift */; };
 		834915042B2BE6D9009EE9C2 /* JHTheClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 834915032B2BE6D9009EE9C2 /* JHTheClockView.m */; };
 		834915082B2BEFE8009EE9C2 /* shiyongxieyi.txt in Resources */ = {isa = PBXBuildFile; fileRef = 834915072B2BEFE8009EE9C2 /* shiyongxieyi.txt */; };
+		834915122B2C4A38009EE9C2 /* LTWallpaperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834915102B2C4A38009EE9C2 /* LTWallpaperCell.swift */; };
+		834915132B2C4A38009EE9C2 /* LTWallpaperCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 834915112B2C4A38009EE9C2 /* LTWallpaperCell.xib */; };
+		834915172B2C5752009EE9C2 /* geyan.plist in Resources */ = {isa = PBXBuildFile; fileRef = 834915162B2C5752009EE9C2 /* geyan.plist */; };
 		8368957D2B1DBBB2009274AD /* BCChatRightNavMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8368957B2B1DBBB1009274AD /* BCChatRightNavMoreView.m */; };
 		8368959C2B1DCE59009274AD /* UIView+RoundedCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = 8368959B2B1DCE59009274AD /* UIView+RoundedCorners.m */; };
 		837F7F012B2ADB8900C64497 /* LTDiaryDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F7F002B2ADB8900C64497 /* LTDiaryDao.swift */; };
@@ -120,6 +123,9 @@
 		834915022B2BE6D9009EE9C2 /* JHTheClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTheClockView.h; sourceTree = "<group>"; };
 		834915032B2BE6D9009EE9C2 /* JHTheClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTheClockView.m; sourceTree = "<group>"; };
 		834915072B2BEFE8009EE9C2 /* shiyongxieyi.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = shiyongxieyi.txt; sourceTree = "<group>"; };
+		834915102B2C4A38009EE9C2 /* LTWallpaperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTWallpaperCell.swift; sourceTree = "<group>"; };
+		834915112B2C4A38009EE9C2 /* LTWallpaperCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LTWallpaperCell.xib; sourceTree = "<group>"; };
+		834915162B2C5752009EE9C2 /* geyan.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = geyan.plist; sourceTree = "<group>"; };
 		8368957B2B1DBBB1009274AD /* BCChatRightNavMoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCChatRightNavMoreView.m; sourceTree = "<group>"; };
 		8368957C2B1DBBB2009274AD /* BCChatRightNavMoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCChatRightNavMoreView.h; sourceTree = "<group>"; };
 		8368959A2B1DCE59009274AD /* UIView+RoundedCorners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RoundedCorners.h"; sourceTree = "<group>"; };
@@ -320,6 +326,7 @@
 		832482642B29B34600DB44A9 /* wallpaper */ = {
 			isa = PBXGroup;
 			children = (
+				8349150B2B2C496B009EE9C2 /* view */,
 				832482652B29B35100DB44A9 /* LTWallpaperViewController.swift */,
 			);
 			path = wallpaper;
@@ -340,6 +347,15 @@
 				8324826B2B29B39400DB44A9 /* LYAboutViewController.swift */,
 			);
 			path = about;
+			sourceTree = "<group>";
+		};
+		8349150B2B2C496B009EE9C2 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				834915102B2C4A38009EE9C2 /* LTWallpaperCell.swift */,
+				834915112B2C4A38009EE9C2 /* LTWallpaperCell.xib */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		837F7EFF2B2ADB7500C64497 /* diary */ = {
@@ -365,6 +381,7 @@
 		83874E8F2AFB759B00D63D2E /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				834915162B2C5752009EE9C2 /* geyan.plist */,
 				830FD7D72B216B57000DF678 /* lianaiqingdan.plist */,
 				83874EB42AFCACB700D63D2E /* HYLocalPathManager.h */,
 				83874EB32AFCACB700D63D2E /* HYLocalPathManager.m */,
@@ -644,11 +661,13 @@
 				83874E952AFB75B400D63D2E /* reliankapian.plist in Resources */,
 				83874E932AFB75B400D63D2E /* 锐字真言体.ttf in Resources */,
 				83E42F772ADCC67A009D3D99 /* LaunchScreen.storyboard in Resources */,
+				834915172B2C5752009EE9C2 /* geyan.plist in Resources */,
 				834915082B2BEFE8009EE9C2 /* shiyongxieyi.txt in Resources */,
 				83E42F742ADCC67A009D3D99 /* Assets.xcassets in Resources */,
 				83E42F722ADCC679009D3D99 /* Main.storyboard in Resources */,
 				9AACCAF22B25B46C00D81606 /* LTMyCell.xib in Resources */,
 				830FD7D82B216B57000DF678 /* lianaiqingdan.plist in Resources */,
+				834915132B2C4A38009EE9C2 /* LTWallpaperCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -737,6 +756,7 @@
 				9AB7A0422ADD745800C10C9F /* UIColor+YX.swift in Sources */,
 				837F7F052B2ADB9A00C64497 /* LTDiaryLogic.swift in Sources */,
 				832482562B29A86600DB44A9 /* LTLoveTabHeadView.swift in Sources */,
+				834915122B2C4A38009EE9C2 /* LTWallpaperCell.swift in Sources */,
 				8324823A2B295D3B00DB44A9 /* LTLoginViewController.swift in Sources */,
 				832482592B29B2A200DB44A9 /* LTDiaryViewController.swift in Sources */,
 				837F7F032B2ADB9200C64497 /* LTDiaryModel.swift in Sources */,
@@ -930,6 +950,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LoveTime/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "保存相册";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -967,6 +988,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LoveTime/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "保存相册";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

@@ -79,7 +79,7 @@ class LTMyViewController: LTBaseViewController {
         self.list = [["情侣壁纸","情侣日记","情侣时钟"],["隐私协议","评价我们","关于我们"]]
         let model = LTLoginModel()
         model.name = "点击登录"
-        model.imageName = ""
+        model.imageName = "p_moren_Img"
         self.headView.getModel(model: model)
         self.headView.isUserInteractionEnabled = true
         self.tableView.reloadData()

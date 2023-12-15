@@ -69,6 +69,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="content" destination="WSe-xY-UXc" id="axd-Gy-Su3"/>
+                <outlet property="line" destination="bWe-9v-nmw" id="L3X-kU-mux"/>
                 <outlet property="name" destination="gbx-ff-OB5" id="Ww9-Gy-kuh"/>
                 <outlet property="timeLab" destination="KV8-M9-aC6" id="J6R-5P-cn6"/>
             </connections>

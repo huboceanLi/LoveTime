@@ -288,4 +288,15 @@
     return array;
 }
 
++ (NSString *)randomGeyan
+{
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"geyan" ofType:@"plist"];
+    
+    NSArray *tempArr = [NSArray arrayWithContentsOfFile:filePath];
+    
+    NSUInteger randomValue = arc4random_uniform(tempArr.count); // 生成 0 到 99 之间的随机数
+
+    return tempArr[randomValue];
+}
+
 @end

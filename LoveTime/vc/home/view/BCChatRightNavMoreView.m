@@ -58,7 +58,7 @@
     }];
         
     CGFloat itemHeight = 55.0;
-    CGFloat itemWitdh = 200;
+    CGFloat itemWitdh = 140;
     CGFloat itemTopMargin = 4.0;
 
     __weak __typeof(self)weakSelf = self;
