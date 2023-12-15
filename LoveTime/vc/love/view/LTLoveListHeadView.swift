@@ -20,7 +20,7 @@ class LTLoveListHeadView: UICollectionReusableView {
     
     lazy var desLab: UILabel = {
         let desLab = UILabel(frame: .zero)
-        desLab.font = UIFont.systemFont(ofSize: 16)
+        desLab.font = UIFont.lt_ZhenyanGBFont(ofSize: 15)
         return desLab
     }()
     
@@ -31,7 +31,7 @@ class LTLoveListHeadView: UICollectionReusableView {
     
     func setUpUI() {
         
-        self.backgroundColor = UIColor.red
+        self.backgroundColor = UIColor.clear
         
         addSubview(headImageView)
         addSubview(desLab)

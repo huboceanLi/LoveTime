@@ -109,7 +109,7 @@ extension LTLoveViewController: UICollectionViewDataSource, UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(LTLoveListCell.classForCoder()), for: indexPath) as? LTLoveListCell else { return UICollectionViewCell() }
 
-        cell.backgroundColor = UIColor.purple
+        cell.backgroundColor = UIColor.clear
         var list: [LTLoveListModel] = []
         if indexPath.section == 0 {
             if let arr = lsatMap["爱的初体验"] {

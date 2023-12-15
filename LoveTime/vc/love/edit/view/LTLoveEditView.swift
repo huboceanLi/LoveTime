@@ -29,7 +29,7 @@ class LTLoveEditView: UIView {
     lazy var timeLab: UILabel = {
         let timeLab = UILabel(frame: .zero)
         timeLab.font = UIFont.systemFont(ofSize: 15)
-        timeLab.backgroundColor = UIColor.green
+        timeLab.backgroundColor = UIColor.clear
         return timeLab
     }()
     
@@ -44,7 +44,7 @@ class LTLoveEditView: UIView {
     
     lazy var lines1: UIView = {
         let lines1 = UIView(frame: .zero)
-        lines1.backgroundColor = UIColor.green
+        lines1.backgroundColor = UIColor.lightGray.withAlphaComponent(0.1)
         return lines1
     }()
     
@@ -52,12 +52,13 @@ class LTLoveEditView: UIView {
         let contentTextView = QMUITextView(frame: .zero)
         contentTextView.font = UIFont.systemFont(ofSize: 15)
         contentTextView.placeholder = "留下足迹..."
+        contentTextView.backgroundColor = UIColor.clear
         return contentTextView
     }()
     
     lazy var lines2: UIView = {
         let lines2 = UIView(frame: .zero)
-        lines2.backgroundColor = UIColor.green
+        lines2.backgroundColor = UIColor.lightGray.withAlphaComponent(0.1)
         return lines2
     }()
     

@@ -33,7 +33,7 @@ class BaseTabBarController: QMUITabBarViewController {
         
         self.viewControllers = [nav1,nav2,nav3]
         
-        UITabBar.appearance().tintColor = UIColor.green
+        UITabBar.appearance().tintColor = UIColor.white
     }
     
 

@@ -1,16 +1,15 @@
 {
   "images" : [
     {
+      "filename" : "morentupian.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "tab_5_off@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "tab_5_off@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

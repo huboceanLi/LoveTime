@@ -13,7 +13,7 @@ class LTLoveListCell: UICollectionViewCell {
 
     lazy var headImageView: UIImageView = {
         let headImageView = UIImageView(frame: .zero)
-        headImageView.backgroundColor = UIColor.green
+        headImageView.backgroundColor = UIColor.clear
         headImageView.layer.cornerRadius = loveListItemWidth / 2
         headImageView.layer.masksToBounds = true
         return headImageView

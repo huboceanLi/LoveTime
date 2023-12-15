@@ -12,14 +12,14 @@ class LTLoveHeadView: UIView {
 
     lazy var titleLab: UILabel = {
         let titleLab = UILabel(frame: .zero)
-        titleLab.font = UIFont.boldSystemFont(ofSize: 30)
+        titleLab.font = UIFont.lt_ZhenyanGBFont(ofSize: 30)
         titleLab.text = "恋爱清单"
         return titleLab
     }()
     
     lazy var desLab: UILabel = {
         let desLab = UILabel(frame: .zero)
-        desLab.font = UIFont.systemFont(ofSize: 22)
+        desLab.font = UIFont.lt_ZhenyanGBFont(ofSize: 15)
         desLab.text = "情侣必备的100件事"
         return desLab
     }()

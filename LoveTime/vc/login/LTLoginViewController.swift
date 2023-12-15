@@ -46,7 +46,15 @@ class LTLoginViewController: LTBaseViewController {
                     MBProgressHUD.hide(for: self.view, animated: true)
                 }
             }
-            
+        }
+        
+        loginView.handleTapTermCallback = { [weak self] in
+                   
+           guard let self = self else {
+               return
+           }
+            let vc = LTYisiViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     

@@ -18,7 +18,7 @@ class LTLoginView: UIView {
 
     lazy var cionImageView: UIImageView = {
         let cionImageView = UIImageView(frame: .zero)
-        cionImageView.backgroundColor = UIColor.purple
+        cionImageView.image = UIImage(named: "about_Img")
         cionImageView.isUserInteractionEnabled = true
         cionImageView.layer.cornerRadius = 10.0
         cionImageView.layer.masksToBounds = true
@@ -55,8 +55,9 @@ class LTLoginView: UIView {
         loginButton.setTitle("登录", for: .normal)
         loginButton.layer.cornerRadius = 6.0
         loginButton.layer.masksToBounds = true
-        loginButton.backgroundColor = UIColor.green
-        loginButton.setTitleColor(UIColor.black, for: .normal)
+        loginButton.backgroundColor = UIColor.color4F80FF()
+        loginButton.setTitleColor(UIColor.white, for: .normal)
+        loginButton.titleLabel?.font = UIFont.lt_ZhenyanGBFont(ofSize: 18)
         loginButton.addTarget(self, action: #selector(loginAction), for: .touchUpInside)
         return loginButton
     }()

@@ -78,7 +78,7 @@ class HomeEditView: UIView {
     
     lazy var lines1: UIView = {
         let lines1 = UIView(frame: .zero)
-        lines1.backgroundColor = UIColor.green
+        lines1.backgroundColor = UIColor.lightGray.withAlphaComponent(0.1)
         return lines1
     }()
     
@@ -92,7 +92,7 @@ class HomeEditView: UIView {
     
     lazy var lines2: UIView = {
         let lines2 = UIView(frame: .zero)
-        lines2.backgroundColor = UIColor.green
+        lines2.backgroundColor = UIColor.lightGray.withAlphaComponent(0.1)
         return lines2
     }()
     
